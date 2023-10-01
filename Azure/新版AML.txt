@@ -1,0 +1,44 @@
+﻿1.[DAY01] Azure Machine Learning 是什麼？
+https://ithelp.ithome.com.tw/m/articles/10264644
+
+
+
+[DAY02] 建立 Azure Machine Learning Workspace
+https://ithelp.ithome.com.tw/m/articles/10265598
+（有新增workspace的詳細步驟解釋）
+
+
+2.一起學習 Azure Machine Learning 系列
+大魔術熊貓工程師 
+https://ithelp.ithome.com.tw/users/20120030/ironman/4905
+
+
+3.【Azure MLOps - 1】使用Azure DevOps建立AML pipelines
+ silviasu 
+https://ithelp.ithome.com.tw/articles/10310739
+
+許多模型服務上線了一陣子之後，一定會遇到模型再訓練、部署與管理的難題，
+如果能夠把AML模型訓練、AML模型註冊自動化，會減輕開發人員許多負擔，
+這個理念就是CI/CD，自動整合與部署(Continuous Integration/Continuous Deployment)
+
+機器學習的三大元素:【資料】、【訓練模型的程式碼】、【模型】都能做到自動化流程與版本控管，
+
+自動化流程
+「清整訓練資料」自動化 (data preprocessing)
+「訓練模型」自動化 (model training)
+「部署模型」自動化 (model depolyment)
+
+
+【Azure MLOps - 5】執行Azure DevOps CI pipeline
+https://ithelp.ithome.com.tw/articles/10310850
+
+下一篇【Azure MLOps - 2】使用Azure DevOps建立專案與連線設定
+
+或其他篇
+【Azure MLOps - 3】使用Azure DevOps建立訓練模型的CI pipeline(上)
+【Azure MLOps - 4】使用Azure DevOps建立訓練模型的CI pipeline(下)
+【Azure MLOps - 5】執行Azure DevOps CI pipeline
+【Azure MLOps - 6】建立CD pipeline:把機器學習模型部署到staging area
+【Azure MLOps - 7】建立CD pipeline:把機器學習模型部署到production area
+【Azure MLOps - 最終篇】END TO END CI/CD MLOPS
+

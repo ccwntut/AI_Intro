@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html lang=" zh-cmn-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>陳擎文教學網：人工智慧概論(通識)
+      </title>
+      
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- jscript src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script-->
+<!-- jscript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAp8hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script-->
+<!-- jscript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script-->
+
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+<style>
+BODY
+{
+SCROLLBAR-FACE-COLOR: #CCFFCC; SCROLLBAR-HIGHLIGHT-COLOR: #C8DCFF; SCROLLBAR-SHADOW-COLOR: #434e78; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #C8DCFF; SCROLLBAR-ARROW-COLOR: #cccccc; SCROLLBAR-TRACK-COLOR: #CCFFCC; FONT-STYLE: normal; SCROLLBAR-DARKSHADOW-COLOR: #20253a;font-size: 24px;
+}
+.purple{
+	color:#F09;	
+}
+.darkpurple{
+	color:#909;	
+}
+.red
+{  
+  font-weight: 900;
+  color: red;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+</style>     
+
+
+<script>
+ function show01()
+  {
+    var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+    var collapseList = collapseElementList.map(function (collapseEl) 
+    {
+      return new bootstrap.Collapse(collapseEl)
+    })
+  }
+</script>
+
+  </head>
+
+
+<body style="background-color:rgb(217, 234, 235)">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">教學網站</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+
+                    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              一般程式類
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="../vb_net/vb_net.htm">vb.net</a></li>
+                <li><a class="dropdown-item" href="../cpp/index.htm"">c++</a></li>
+                <li><a class="dropdown-item" href="../csharp/index.htm"">c#</a></li>
+                <li><a class="dropdown-item" href="../java/java.htm">java</a></li>
+                <li><a class="dropdown-item" href="../python/index.htm">python基礎</a></li>
+                <li><a class="dropdown-item" href="../django/index.htm">python網頁django</a></li>                    
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              手機程式類
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li> <a class="dropdown-item" href="../appinventor/index.htm">appInventor</a></li>
+              <li> <a class="dropdown-item" href="../jquery_phoneGap/jquery_phoneGap.htm">jquery Mobile手機程式</a></li>
+              <li> <a class="dropdown-item" href="../ionic/ionic.htm">ionic＋angularJS</a></li>
+              <li> <a class="dropdown-item" href="../Bootstrap4/">Bootstrap</a></li>                
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              網頁程式類
+              </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li> <a class="dropdown-item" href="../web2010/webFlash.htm">基礎網頁設計</a></li>
+                  <li> <a class="dropdown-item" href="../html5_CSS_javascript/html5_CSS_javascript.htm">html5+CSS+javascrip</a></li>        
+                  <li> <a class="dropdown-item" href="../Bootstrap4/">Bootstrap</a></li>                    
+                  <li> <a class="dropdown-item" href="../aspnet/aspnet.htm">互動網頁程式</a></li>   
+                  <li> <a class="dropdown-item" href="../php/">PHP</a></li> 
+                  <li> <a class="dropdown-item" href="../cmedia/">商用多媒體設計</a></li>   
+                  <li> <a class="dropdown-item" href="../django/index.htm">python網頁django</a></li>          
+                  <li> <a class="dropdown-item" href="../jquery_phoneGap/jquery_phoneGap.htm">jquery Mobile手機程式</a></li>
+                  <li> <a class="dropdown-item" href="../ionic/ionic.htm">ionic＋angularJS</a></li>              
+                  <li> <a class="dropdown-item" href="../digitalArchives/digitalArchives.htm">數位典藏</a></li>
+                </ul>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              資料庫程式
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li> <a class="dropdown-item" href="../sql/index.htm">SQL資料分析</a></li> 
+              <li> <a class="dropdown-item" href="../database/database.htm">資料庫</a></li>  
+              <li> <a class="dropdown-item" href="../aspnet/aspnet.htm">互動網頁程式</a></li>    
+              <li> <a class="dropdown-item" href="../php/index.htm">PHP</a></li>
+              <li> <a class="dropdown-item" href="../django/index.htm">python網頁django</a></li>
+              <li> <a class="dropdown-item" href="../jquery_phoneGap/jquery_phoneGap.htm">jquery Mobile手機程式</a></li>                  
+              <li> <a class="dropdown-item" href="../digitalArchives/digitalArchives.htm">數位典藏</a></li>
+            </ul>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              AI人工智慧
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li> <a class="dropdown-item" href="../python/index.htm">python基礎</a></li>
+              <li> <a class="dropdown-item" href="../pandas/index.htm">pandas商業數據程式分析</a></li> 
+              <li> <a class="dropdown-item" href="../sql/index.htm">SQL資料分析</a></li> 
+              <li> <a class="dropdown-item" href="../scipy/">scipy統計數據分析</a></li> 
+              <li> <a class="dropdown-item" href="../predict/">python人工智慧在商情預測之應用</a></li> 
+              <li> <a class="dropdown-item" href="../python_data/index.htm">python網絡大數據分析與爬取</a></li>               
+              <li> <a class="dropdown-item" href="../linearAlgebra/index.htm">python解線性代數</a></li>
+              <li> <a class="dropdown-item" href="../python_math/index.htm">python求解數學：高中大學數學，工程數學，微積分</a></li>  
+              <li> <a class="dropdown-item" href="../AI_Intro/index.htm">人工智慧概論(通識)</a></li>
+              <li> <a class="dropdown-item" href="../ai/index.htm">人工智慧</a></li>
+
+            </ul>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              遊戲動畫程式
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li> <a class="dropdown-item" href="../unity/">Unity 3D遊戲引擎</a></li>                
+              <li> <a class="dropdown-item" href="../UnityCode/">Unity互動程式模組化設計</a></li> 
+              <li> <a class="dropdown-item" href="../Unity2D/">Unity2D遊戲</a></li> 
+              <li> <a class="dropdown-item" href="../CocosCreator/">Cocos Creator 2D遊戲</a></li>
+              <li> <a class="dropdown-item" href="../appinventor/">手機遊戲：App Inventor</a></li>
+              <li> <a class="dropdown-item" href="../Solar2D/">手機遊戲引擎：Solar2D</a></li>
+              <li> <a class="dropdown-item" href="../book1/book1.htm">3D Flash Script</a></li>
+              <li> <a class="dropdown-item" href="../scratch/">網頁遊戲：Scratch</a></li>
+              <li> <a class="dropdown-item" href="../construct/">網頁遊戲引擎：Construct</a></li>
+            </ul>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              其它類
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li> <a class="dropdown-item" href="../busEthics/">企業倫理</a></li> 
+                <li> <a class="dropdown-item" href="../digitalArchives/digitalArchives.htm">數位典藏</a></li>
+                <li> <a class="dropdown-item" href="../multimedia/multimedia.htm">多媒體概論</a></li>
+              </ul>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container" style="margin-top:50px;" id="mainIndex">
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">
+
+            <tr bgcolor="#f0f0f0">
+              <td colspan="6"><div align="right"></div></td>
+            </tr>
+            <tr bgcolor="#f0f0f0">
+              <td colspan="6"><div align="center">
+                  <div align="center">陳擎文教學網：人工智慧概論(通識)<br>
+                    <div align="left" class="purple">
+                    1.課程分成三部分：<br>
+                    (1).人工智慧的歷史與現況<br>
+                    (2).實作人工智慧的三種研究工具（python，Azure ML，Vislab）<br>
+                    (3).人工智慧的最新熱門領域：生成式AI應用，個人助理（ChatGPT，Bard，Bing Chat，文心一言，盤古大模型）<br>
+                    <br>
+                    2.學習AI程式的次第：<br>
+                    (1).先學基礎數據截取，數據分析，數據視覺化的技術（pandas模組）<br>
+                    (2).再學迴歸/分類分析的技術：機器學習（numpy，sklearn模組）<br>
+                    (3).再學人工智慧的技術：深度學習（tensorflow-keras模組）<br>                    
+                    <a href="pic/scope12.png" target="_blank">學習AI的4步驟圖</a><br>
+                    <br>
+                    3.<a href="pic/ML-07.jpg" target="_blank">常見機器學習ML的模型1</a>，
+                    <a href="pic/ML-06.PNG" target="_blank">ML模型2</a>，
+                    <a href="pic/ML-11.PNG" target="_blank">ML模型3</a>，
+                    <a href="pic/ML-05.PNG" target="_blank">ML模型4</a>
+                    <br>
+                    4.<a href="pic/AI-tech-01.jpg" target="_blank">常見深度學習DL的模型1</a>，
+                    <a href="pic/DL-04.jpg" target="_blank">DL模型2</a>，
+                    <a href="pic/DL-02.PNG" target="_blank">DL模型3</a><br>
+                    <br>
+                  </div>
+              </div></td>
+            </tr>
+            <tr bgcolor="#f0f0f0">
+              <td colspan="6"><div align="left"></div></td>
+            </tr>
+            <tr bgcolor="#f0f0f0">
+              <td colspan="6"><div align="center">
+<div align="left">
+  <p><br/>
+  <p class="text-center">
+    <button onclick="show01()" class="btn btn-danger">關閉/打開 全部章節</button>
+  </p>  
+
+
+  <p><a href="#chp0">資源（Resource）</a></p>
+  <p style="text-indent: 50px;">
+    <a class="text-danger" href="intro/chp0-introduction.pptx" target="_blank" role="button" >
+      chp0.課程簡介
+    </a>
+  </p>
+
+  <p><a class="font-weight-bold" >【一，人工智慧的歷史/應用/分類/未來】</a></p>
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample-1">
+      chp1.人工智慧的歷史/應用
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-1">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="intro/chp1-AI的歷史與現況.pptx">chp1-AI的歷史與現況</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp2-AI的各種應用.pptx">chp2-AI的各種應用</a></p>
+
+    </div>
+  </div>
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-2" role="button" aria-expanded="false" aria-controls="collapseExample-2">
+      chp2.人工智慧的種類/未來
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-2">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="intro/chp3-機器學習-分類.pptx">chp3-機器學習-分類</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp4-機器學習-分群.pptx">chp4-機器學習-分群</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp5-深度學習-基礎.pptx">chp5-深度學習-基礎</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp6-深度學習-進階.pptx">chp6-深度學習-進階</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp7-生成對抗網路.pptx">chp7-生成對抗網路</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp8-生成式AI.pptx">chp8-生成式AI應用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp9-AI的未來與挑戰.pptx">chp9-AI的未來與挑戰</a></p>
+    </div>
+  </div>
+
+
+  <p><a class="font-weight-bold" >【二，實作人工智慧的三種研究工具：python，Azure ML，Vislab】</a></p>
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-11" role="button" aria-expanded="false" aria-controls="collapseExample-11">
+      chp11.數據處理基礎練習，及數據的3種格式：DataFrame，array矩陣，list串列數組
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-11">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1hINweDxrIoF7pqZBS-Nh6NGUAzQ-Z5Hh?usp=sharing" target="_blank">範例11-1.讀取excel/csv資料表</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1z-xEY31VlPGO7iXS30Cn9kboSN4LodrU?usp=sharing" target="_blank">範例11-2.讀取數據後畫圖，來觀察可以行銷的點</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1cRg8Zvk5kv7w4Ow55Os3QiLimqk00GPf?usp=sharing" target="_blank">範例11-3.條件查詢你要的資料</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1DPu47MrVjPAwzlS7-ZFGHn-FnenK9z7F?usp=sharing" target="_blank">範例11-4.刪除一個欄位，刪除一列，df.drop(欄位,axis="columns",inplace=True)</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1LQrG3BgxTMcxyjG_bjcbrKcbKPWa4PGL?usp=sharing" target="_blank">範例11-5.新增一個欄位，新增一列(1筆學生)</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1BcGnXnN4Q1F-Ni-zvF9DzIKKMXemHDpS?usp=sharing" target="_blank">範例11-6.自行建立dataFrame（以欄位角度建立df，以串列list建立df，以矩陣array建立df）</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1FKbAzUJgtTvihfzxiTCG8TjbBet8_2Aj?usp=sharing" target="_blank">範例11-7.三種定點取值法：欄位取值，列取值（df[欄位]，df.iloc[]，df.loc[]）</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1VFr-XronUpzAG0MzO8KhfLH8wCDcJwIZ?usp=sharing" target="_blank">範例11-8.三種視覺化畫圖方式(pandas，matplotlib，seaborn)</a></p>
+
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1ku2XMHttynWPJT1yZb0f3sKnFiyX3_xj?usp=sharing" target="_blank">範例11-9.三種資料格式（DataFrame，array矩陣，list串列數組）</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/11jpIHPBjw3Ava2MUslGKudIZQh7m_y61?usp=sharing" target="_blank">範例11-10.資料的取代replace</a></p>
+
+
+    </div>
+  </div>
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-12" role="button" aria-expanded="false" aria-controls="collapseExample-12">
+      chp12.ptyhon人工智慧『簡易3步驟』程式寫法(簡易基礎13題)      
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-12">
+    <div class="card card-body">
+      【二，機器學習，Machine Learning】<br>
+      【二.一，監督式學習：Supervised learning】<br>
+      【二.一.一，迴歸預測：Regression Prediction】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1TfxQP11jaBGWEA4NeCezxlMImRwlHWLk?usp=sharing" target="_blank">範例12-1.用sklearn模組，『簡易3步驟』建立『線性迴歸模型』來預測『美元-黃金關係』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1mxJsc-Ri-tkjutLeiDtq5p3gvOdAKxHq?usp=sharing" target="_blank">範例12-2.用『numpy模組』，『簡易3步驟』建立『線性迴歸』模型來預測『美元-黃金關係』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1pfZuTZabja4utzAWgF8HRVBgssXK1GCU?usp=sharing" target="_blank">範例12-13.用『sklearn模組』，『5步驟』建立『非線性迴歸多項式』模型來預測『美元-黃金關係』</a></p>
+      【二.一.二，分類預測：Classification Prediction】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1r2uThw9psGFXMBuh6zBItwIkTVnZSr-F?usp=sharing" target="_blank">範例12-3.用sklearn模組，『簡易3步驟』建立『KNN，K鄰近』模型來預測『客戶關係管理裡面的客戶價值度』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1qOL9qTQZR-nEqMiXJ2cH1xuzYunvxy9u?usp=sharing" target="_blank">範例12-4.用sklearn模組，『簡易3步驟』建立『邏輯迴歸』模型來預測『客戶關係管理裡面的客戶價值度』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1mqvr_AEj409bk41_uB7lRi-d2GhNgNaB?usp=sharing" target="_blank">範例12-5.用sklearn模組，『簡易3步驟』建立『決策樹tree』模型來預測『客戶關係管理裡面的客戶價值度』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1_G4TamfU2tHnoF-48j-ec_3SSrlNsnNA?usp=sharing" target="_blank">範例12-6.用sklearn模組，『簡易3步驟』建立『隨機森林法』模型來預測『客戶關係管理裡面的客戶價值度』</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1LSnLEgK3wNzq3xoBzogzSh5GmfNpSlyg?usp=sharing" target="_blank">範例12-7.用sklearn模組，『簡易3步驟』建立『支持向量機算法SVM』模型來預測『客戶關係管理裡面的客戶價值度』</a></p>
+      <br>
+      【二.二，非監督式學習：Un-Supervised learning】<br>
+      【二.二.一，集群分析，分群分析：clustering】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1XJZZSWFGZqHUbrAU6PvGnTex1eVQWxu9?usp=sharing" target="_blank">範例12-8.用sklearn模組，『簡易3步驟』建立『K-means分群』模型來把『動物園的動物數據自動分群』</a></p>
+      【二.二.二，降維簡化：dimension reductoin】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1aFa3pq9dGMBqbOM152kbVOq0e0DzNB9R?usp=sharing" target="_blank">範例12-9.用sklearn模組，『簡易3步驟』建立『主成份分析PCA』降維模型，來把『二維數據』壓縮降維成『一維數據』</a></p>
+
+      <br>
+      【三，深度學習，Deep Learning】<br>
+      【三.一，迴歸預測：Regression Prediction】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1Ui1YvG126w2F_UcR8827iAxopbdmRem4?usp=sharing" target="_blank">範例12-10.用『深度學習的keras』模組，『簡易4步驟』建立『類神經網路』的『一顆神經元』『線性迴歸模型』，輸入x值，預測y</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/13yGjsxcpOgIy_3xykZcAVrOv5Izitz7h?usp=sharing" target="_blank">範例12-11.用『深度學習的keras』模組，『簡易4步驟』建立『類神經網路』的『多顆神經元』『非線性迴歸模型』，輸入x值，預測y</a></p>
+      【三.二，分類預測：Classification Prediction】<br>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1rNX1p2RkY4tJ3Uu4bfSMfc87I8hZyDos?usp=sharing" target="_blank">範例12-12.用『深度學習的keras』模組，『簡易4步驟』建立『類神經網路』的『多顆神經元』『非線性分類模型』，由『面紙的耐酸度，強度』來預測『客戶評估面紙的好壞』</a></p>
+    </div>
+  </div>
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-13" role="button" aria-expanded="false" aria-controls="collapseExample-13">
+      chp13.不用寫程式機器學習工具：Azure ML（Machine Learning）      
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-13">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="Azure/chp1-Azure-ML與機器學習簡介.pptx" target="_blank">chp13-1-Azure-ML簡介，與機器學習簡介</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp2-範例1-實作收入分類.pptx" target="_blank">chp13-2-範例1：實作收入預測</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp3-範例2-客戶流失預測.pptx" target="_blank">chp13-3-範例2-客戶流失預測.pptx</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp4-上傳資料集變成AML裡面預設的dataset.pptx" target="_blank">chp13-4-上傳資料集變成AML裡面預設的dataset</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp5-ImportData模組讀取外部資料集.pptx" target="_blank">chp13-5-ImportData模組讀取外部資料集</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp6-EditMetaData修改資料型態.pptx" target="_blank">chp13-6-EditMetaData修改資料型態</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp7-CleanMissingData填補缺值.pptx" target="_blank">chp13-7-CleanMissingData填補缺值</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp8-特徵工程.pptx" target="_blank">chp13-8-特徵工程</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp9-用新版AML建立模型.pptx" target="_blank">chp13-9-用新版AML建立模型</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp10-特徵選取，找出較重要的特徵欄位.pptx" target="_blank">chp13-10-特徵選取，找出較重要的特徵欄位</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp11-模型的效能評估.pptx" target="_blank">chp13-11-模型的效能評估</a></p>
+      <p style="text-indent: 60px;"><a href="Azure/chp12-部署用Designe做好的Pipiline到WebAPI.pptx" target="_blank">chp13-12-部署用Designe做好的Pipiline到Web API</a></p>
+
+    </div>
+  </div>
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-14" role="button" aria-expanded="false" aria-controls="collapseExample-14">
+      chp14.不用寫程式的影像辨識的工具：VisLab      
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-14">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="#exp4_1" target="_blank">14-1.VisLab，VisCam簡介</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_2" target="_blank">14-2.VisLab，VisCam教學影片</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_3">14-3.範例1：Classification分類器：標記工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_4">14-4.範例2：Classification分類器：訓練工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_5">14-5.範例3：Classification分類器：驗證工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_6">14-6.範例4：Object Detection 物件偵測：標記工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_7">14-7.範例5：Object Detection 物件偵測：訓練工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_8">14-8.範例6：Object Detection 物件偵測：驗證工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_9">14-9.範例7：Segmentation 分割：標記工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_10">14-10.範例8：Segmentation 分割：訓練工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_11">14-11.範例9：Segmentation 分割：驗證工具</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_12">14-12.範例10：VisCam</a></p>
+      <p style="text-indent: 60px;"><a href="#exp4_13">14-13.VisLab 進階操作 &蒐集圖片方式</a></p>
+  <br>
+  <p><br/></p> 
+                    
+                </div>
+  </div>
+
+  <p><a class="font-weight-bold" >【三，人工智慧現在最熱門的『生成式AI』應用，大語言模型(LLM，large language model)：ChatGPT，Bard，Bing，文心一言，盤古大模型】</a></p>
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-21" role="button" aria-expanded="false" aria-controls="collapseExample-21">
+      chp21.ChatGPT的各種應用
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-21">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="intro/chp21-1-chatGPT.pptx" target="_blank">chp21-1.ChatGPT的初步使用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp21-2-提示工程.pptx" target="_blank">chp21-2.GPT與提示工程Prompt engineering</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp21-3-ChatGPT-沉浸式翻譯.pptx" target="_blank">chp21-3.ChatGPT的翻譯應用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp21-4-英文口語對話-chatGPT.pptx" target="_blank">chp21-4.ChatGPT的英文口語對話</a></p>
+      <p style="text-indent: 60px;"><a href="" target="_blank">chp21-5.ChatGPT輔助做Excel的程式應用</a></p>
+      <p style="text-indent: 60px;"><a href="" target="_blank">chp21-6.ChatGPT輔助做PPT的應用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp21-7-chatGPT4.pptx" target="_blank">chp21-7.如何使用ChatGPT 4.0</a></p>
+
+    </div>
+  </div>
+
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-22" role="button" aria-expanded="false" aria-controls="collapseExample-22">
+      chp22.Google Bard的各種應用
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-22">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="intro/chp22-1-Bard.pptx" target="_blank">chp22-1.Bard的初步使用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp22-2-圖片識別功能.pptx" target="_blank">chp22-2.Bard上傳圖片，可以幫你分析圖片的意義</a></p>
+
+    </div>
+  </div>
+
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-23" role="button" aria-expanded="false" aria-controls="collapseExample-23">
+      chp23.微軟Bing的各種應用
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-23">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="intro/chp23-1-Bing.pptx" target="_blank">chp23-1.BingChat的初步使用</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp23-2-excel-csv.pptx" target="_blank">chp23-2.處理Excel-csv檔案</a></p>
+      <p style="text-indent: 60px;"><a href="intro/chp23-3-生成圖片.pptx" target="_blank">chp23-3.使用Bing Image Creator生成AI圖片
+        </a></p>
+
+    </div>
+  </div>
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-24" role="button" aria-expanded="false" aria-controls="collapseExample-24">
+      chp24.百度的文心一言
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-24">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="https://yiyan.baidu.com/" target="_blank">chp24-1.百度文心一言的初步使用(必須有百度帳號)</a></p>
+       <p style="text-indent: 60px;"><a href="https://yiyan.baidu.com/" target="_blank">chp24-2.百度文心一言的各種應用範本：指令中心</a></p>
+       <p style="text-indent: 60px;"><a href="intro/chp24-3-文心一言.pptx" target="_blank">chp24-3.百度文心一言練習範例</a></p>
+       <p style="text-indent: 60px;"><a href="">chp24-4.如何申請百度帳號</a></p>
+       
+       <p style="text-indent: 12px;">百度在 2022 年 8 月 25 日宣布，開放可以使用台灣手機號碼申請百度帳號<br>
+        但是需要借助一些百度旗下的商品（例如：好看視頻APP），才能允許海外申請帳號（選擇 +886 的國碼，並使用台灣的手機號碼來接收驗證碼<br>
+        不過系統經常顯示『操作過於頻繁，請稍後再試』，『你的操作存在安全風險，請稍後再試』而無法成功註冊，但少數人卻可以。
+      </p>
+      <p style="text-indent: 60px;"><a href="https://cyber.suma.tw/youtube/1120702/" target="_blank">方法1：百度海外註冊網站（介紹網頁）</a></p>
+       <p style="text-indent: 120px;"><a href="https://passport.baidu.com/v2/?reg&u=https%3A%2F%2Flogin.baidu.com%2F&tpl=bceplat&overseas=1" target="_blank">百度海外註冊網站入口1</a></p>
+       <p style="text-indent: 120px;"><a href="https://passport.baidu.com/v2/?reg&regType=1&overseas=1&u=https://pan.baidu.com/" target="_blank">百度海外註冊網站入口2</a></p>
+       <p style="text-indent: 60px;"><a href="https://www.youtube.com/watch?v=E-dmopFJNE0/" target="_blank">方法2：使用百度商品好看視頻App來註冊（介紹影片）</a></p>
+       <p style="text-indent: 120px;"><a href="https://haokan.baidu.com/videoui/page/show" target="_blank">好看視頻官網（下載APP）</a></p>
+
+    </div>
+  </div>
+
+ 
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-25" role="button" aria-expanded="false" aria-controls="collapseExample-25">
+      chp25.華為的盤古大模型
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-25">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="https://www.huaweicloud.com/product/pangu.html" target="_blank">chp25-1.華為盤古大模型註冊帳號(中國大陸手機註冊)</a></p>      
+      <p style="text-indent: 60px;"><a href="https://www.huaweicloud.com/intl/en-us/" target="_blank">chp25-2.海外用戶註冊註冊帳號(英文)</a></p>
+      <p style="text-indent: 60px;"><a href="https://id5.cloud.huawei.com/UnifiedIDMPortal/portal/userRegister/regbyemail.html?themeName=red&access_type=offline&clientID=103493351&loginChannel=88000000&loginUrl=https%3A%2F%2Fauth.huaweicloud.com%2Fauthui%2Flogin.html%3Fservice%3Dhttps%253A%252F%252Fwww.huaweicloud.com%252Fintl%252Fzh-cn%252F%23&casLoginUrl=https%3A%2F%2Fauth.huaweicloud.com%2Fauthui%2FcasLogin&service=https%3A%2F%2Fauth.huaweicloud.com%2Fauthui%2FcasLogin%3Fservice%3Dhttps%253A%252F%252Fwww.huaweicloud.com%252Fintl%252Fzh-cn%252F&countryCode=tw&scope=https%3A%2F%2Fwww.huawei.com%2Fauth%2Faccount%2Funified.profile+https%3A%2F%2Fwww.huawei.com%2Fauth%2Faccount%2Frisk.idstate&reqClientType=88&state=91e9dfe9a23a4b0dbd4c1cf2e0c56c66&lang=zh-cn" target="_blank">chp25-3.海外用戶註冊註冊帳號(中文))</a></p>
+      
+      <p style="text-indent: 12px;">
+        盤古大模型3.0，於2023年7月7日對外發布使用，它已在『金融、氣象、制造、醫藥研發、煤礦、鐵路、政務、醫學』等諸多行業發揮著巨大價值，將行業know-how與大模型結合，可以成為各行各業的專業助手<br>
+        華為盤古大模型是一款基於人工智慧技術的語言理解和知識圖譜系統，它可以説明企業快速構建自己的知識庫，並實現智慧問答、推薦等功能。該系統採用了深度學習、自然語言處理等先進技術，具有高效性、準確性和可擴展性等優點。<br>
+        盤古3.0為客戶提供100億參數、380億參數、<br>
+        L0層包括自然語言、視覺、多模態、預測、科學計算五個基礎大模型，提供滿足行業場景中的多種技能需求。<br>
+        L1層是N個行業大模型，華為雲既可以提供使用行業公開數據訓練的行業通用大模型，包括政務，金融，制造，礦山，氣象等大模型﹔<br>
+        L2層為客戶提供了更多細化場景的模型，更加專注於政務熱線、網點助手、先導藥物篩選、傳送帶異物檢測、台風路徑預測等具體行業應用或特定業務場景，<br>
+        <br>
+        根據華為官方的公告，盤古大模型將在 2023 年第三季度開放給台灣地區使用者註冊帳號。屆時，台灣地區的使用者將可以透過華為雲平台註冊盤古大模型帳號，並開始使用盤古大模型的各項功能。<br>
+        目前，台灣地區的使用者可以透過華為雲平台註冊帳號，並使用華為雲平台的其他服務。華為雲平台提供的服務包括雲計算、雲存儲、雲數據庫等。<br>
+
+      </p>
+    </div>
+  </div> 
+
+  <p style="text-indent: 50px;">
+    <a class="text-danger" data-bs-toggle="collapse" href="#collapseExample-26" role="button" aria-expanded="false" aria-controls="collapseExample-26">
+      chp25.使用OpenAI的API，讓自己寫的python程式『有生成式AI的效果：聊天機器人，線上小秘書』
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample-26">
+    <div class="card card-body">
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1kdsgJ05ODr3ZAOIUusR_TJJAvd8FqhCJ?usp=sharing" target="_blank">chp26-1.讓自己的python成為聊天機器人</a></p>
+      <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1FyV78Hwoi0XskCXs0lM_u0tQBQxxwCdB?usp=sharing" target="_blank">chp26-2.建立聊天機器人函數myGPT()，讓自己的python程式可以呼叫penAI的API，回答問題</a></p>
+
+
+    </div>
+  </div>
+
+</td>
+            </tr>
+
+</table>
+<p id="chp0"></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">   
+  <tr bgcolor="#f0f0f0">
+    <td colspan="6">資源</td>
+  </tr>
+  <tr bgcolor="#f0f0f0">
+    <td bgcolor="#FFFFFF">上課工具</td>
+    <td class="style11"><a href="https://docs.google.com/document/d/1EmyRVjYKVXTCR9QvB2ax1i2UsNAecJCH/edit?usp=sharing&ouid=112989736218524454297&rtpof=true&sd=true" target="_blank">線上黑板(
+        Online blackboard)</a></td>
+    <td><a href="https://www.zuvio.com.tw/" target="_blank">Zuvio</a></td>
+    <td><a href="https://drive.google.com/file/d/1BfTA4ETiDDXP-J3rxHuHGS3aVbLLJRFs/view?usp=sharing" target="_blank">Goole輸入法(Input:exe)</a></td>
+    
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">證照考試：商用數據應用師</td>
+  <td><a href="certificate/商用數據應用師_無模組_中華企業資源規劃學會 (從中約抽70題)_.pdf" target="_blank">考試題庫 (從中約抽70題)</a></td>
+  <td><a href="https://www.cerps.org.tw/zh-TW/article/2022-03-07%2009:48:08/220307_030044" target="_blank">報名證照相關說明與方法</a></td>
+  <td><a href="">考試方式：100題單選題，每題1分，70分及格</a></td>
+  <td><a href="https://www.opentech.com.tw/#/bookInfo?ISBN=9786263282872" target="_blank">考試指定用書</a></td>
+  <td></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">數據集，資料集，dataset</td>
+  <td><a href="https://archive.ics.uci.edu/" target="_blank">UCI的各種資料集</a></td>
+  <td><a href="https://www.kaggle.com/datasets?fileType=csv" target="_blank">Kaggle的各種資料集</a></td>
+  <td><a href="">考試方式：100題單選題，每題1分，70分及格</a></td>
+  <td><a href="https://www.opentech.com.tw/#/bookInfo?ISBN=9786263282872" target="_blank">考試指定用書</a></td>
+  <td></td>
+</tr>
+
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">上課參考教材</td>
+  <td><a href="https://www.books.com.tw/products/0010876198" target="_blank">書籍：跨領域學 Python：資料科學基礎養成</a></td>
+  <td><a href="https://www.books.com.tw/products/0010789569" target="_blank">書籍：Python 資料科學與人工智慧應用實務</a></td>
+  <td><a href="https://www.books.com.tw/products/0010872905" target="_blank">書籍：一行指令學Python：用機器學習掌握人工智慧</a></td>
+  <td></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="https://www.books.com.tw/products/0010921275?loc=M_br_r0vq68ygz_D_2aabd0_B_1" target="_blank">書籍：用Pandas掌握商務大數據分析</a></td>
+  <td><a href="https://www.books.com.tw/products/CN11723157" target="_blank">進階書籍：Python商業數據分析：零售和電子商務案例</a></td>
+  <td><a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html" target="_blank">pandas官網(英文)</a></td>
+  <td><a href="https://www.w3schools.com/python/pandas/default.asp" target="_blank">w3schools的pandas教學(英文)</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas參考教材</td>
+  <td><a href="https://www.w3cschool.cn/hyspo/" target="_blank">w3Cschool的pandas教學(中文)</a></td>
+  <td><a href="https://steam.oxxostudio.tw/category/python/index.html" target="_blank">Steam教學網-python</a></td>
+  <td><a href="https://www.gairuo.com/p/pandas-tutorial" target="_blank">蓋若pandas 教程</a></td>
+  <td><a href="https://ithelp.ithome.com.tw/articles/10193421" target="_blank">pandas的df的操作函數</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">colab繪圖如何顯示中文，方法1</td>
+  <td colspan="4">    
+    ☎#colab顯示繁體中文，方法1
+    問題：matplotlib繪圖，會發生中文無法顯示的問題<br> 
+    參考：<a href="https://puerdon.github.io/%E5%9C%A8Colab%E4%B8%8A%E8%AE%93matplotlib%E9%A1%AF%E7%A4%BA%E4%B8%AD%E6%96%87-2020-12%E6%9B%B4%E6%96%B0/" target="_blank">colab繪圖如何顯示中文</a><br>
+    ☎<a href="example/resource/1-colab-plot-chinese.txt" target="_blank">程式碼</a>：<br> 
+
+#--------------------------------<br>
+# colab繪圖顯示繁體中文<br>
+#--------------------------------<br>
+import matplotlib<br>
+    # 先下載台北黑體字型<br> 
+    !wget -O taipei_sans_tc_beta.ttf https://drive.google.com/uc?id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_&export=download
+    import matplotlib<br> 
+    # 新增字體<br> 
+    matplotlib.font_manager.fontManager.addfont('taipei_sans_tc_beta.ttf')<br> 
+    # 將 font-family 設為 Taipei Sans TC Beta<br> 
+    # 設定完後，之後的圖表都可以顯示中文了<br> 
+    matplotlib.rc('font', family='Taipei Sans TC Beta')<br>    
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">colab繪圖如何顯示中文，方法2</td>
+  <td colspan="4">    
+    ☎#colab顯示繁體中文，方法2
+    ☎<a href="example/resource/8-colab-plot-chinese.txt" target="_blank">程式碼</a>：<br> 
+
+    #--------------------------------------<br> 
+    # 課本的中文處理<br> 
+    #--------------------------------------<br> 
+    import matplotlib as mpl<br> 
+    import matplotlib.font_manager as fm<br> 
+    <br> 
+    !wget "https://www.wfonts.com/download/data/2014/06/01/simhei/simhei.zip"<br> 
+    !unzip "simhei.zip"<br> 
+    !rm "simhei.zip"<br> 
+    <br> 
+    fm.fontManager.addfont('SimHei.ttf')<br> 
+    mpl.rc('font', family='SimHei')<br> 
+    # 這一行能讓字體變得清晰<br> 
+    %config InlineBackend.figure_format = 'retina'<br>    
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">windows的spyder繪圖如何顯示中文</td>
+  <td colspan="4">
+    ☎解決：windows的spyder，會發生中文無法顯示的問題<br> 
+    參考：<a href="https://ithelp.ithome.com.tw/questions/10193102" target="_blank">windows繪圖如何顯示中文</a><br>
+    ☎<a href="example/resource/2-windows-plot-chinese.txt" target="_blank">程式碼</a>：<br> 
+    
+    #在windows 10 的spyder，繪圖如何顯示中文<br> 
+    #使用微軟正黑體（Microsoft JhengHei）<br> 
+    plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']<br> 
+    <br> 
+    #有些中文字體在碰到負號時，會無法正常顯示，尤其是內建的字體，加入以下語法就可以解決『負號無法顯示』問題<br> 
+    plt.rcParams['axes.unicode_minus'] = False<br> 
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">在colab如何更改目錄</td>
+  <td colspan="4">
+    ☎解決：在colab如何更改目錄的問題<br> 
+    ☎<a href="example/resource/3-chdir.txt" target="_blank">程式碼</a>：<br> 
+    
+    import os<br>
+    os.chdir("/content/drive/MyDrive/Colab Notebooks")<br>
+    !ls<br> 
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">解決簡體字csv造成亂碼</td>
+  <td colspan="4">
+    ☎解決簡體字csv，打開後都是亂碼的問題：<br>
+    <br>
+    第2 種方式：<br>
+    （1）先執行Excel 軟體，新增空白活頁簿，<br>
+    （2）然後在上方功能選項中點選「資料」➜「取得外部資料」➜ 「從文字檔」 → 「選擇csv文件」，<br>
+    選擇你的CSV 檔，<br>
+    在「匯入字串精靈」對話框中選擇檔案原始格式65001:Unicode(UTF-8) 即可。<br>
+    <br>
+    若是utf-8還是有亂碼，再改成<br>
+    在「匯入字串精靈」對話框中選擇檔案原始格式54986:簡體中文(GB18080) 即可。<br>
+    <br>
+    （3）打勾：我的資料有標題<br>
+    （4）分隔符哈：逗號<br>
+<br>    
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">程式模板</td>
+  <td colspan="4">
+    
+    <a href="example/resource/6-excel-plot.txt" class="red" target="_blank">
+      ☎存入excel檔案，並且畫柱狀圖</a>
+      <br>    
+  </td>
+</tr>
+
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">程式模板chp8-6.樞紐分析表的必要指令：展開</td>
+  <td colspan="4">
+    
+    <a href="example/resource/7-excel-manySheet.txt" class="red" target="_blank">
+      ☎輸出excel檔案：建立3個資料表sheet（英文成績，數學成績，中文成績）</a>
+      <br>    
+  </td>
+</tr>
+
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">打開chrome網頁線上英文字典功能</td>
+  <td colspan="4">
+    ☎如何安裝google chrome的網頁線上英文字典工具：<br>
+    ➜google chrome的右上角工具➜更多工具➜擴充功能<br>
+    ➜左上角主選單➜開啟chrome線上應用程式商店<br>
+    ➜勾選：google製作，免費<br>
+    ➜搜尋：google dictionary➜安裝<br>
+    ➜到chrome右上擴充功能➜點按google dictionary的『詳細資料』➜擴充功能選項<br>
+    ➜my language=chinese<br>
+    ➜打勾2個：Pop-up definitions:<br>
+    （1）反白單字翻譯：Display pop-up when I double-click a word<br>
+    （2）ctrl+拖曵整段翻譯： Display pop-up when I select a word or phrase<br>
+    <br>    
+  </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">上課用excel</td>
+  <td><a href="example/resource/scoreChi.xlsx" target="_blank">學生成績-chinese</a></td>
+  <td><a href="example/resource/scoreChiNAN.xlsx" target="_blank">學生成績-有缺值-chinese</a></td>
+  <td><a href="example/resource/scoreChi-his-phy.xlsx" target="_blank">學生成績-物理歷史-chinese</a></td>
+  <td><a href="example/resource/scoreChi-amy-simon.xlsx" target="_blank">學生成績-amy-simon-chinese</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="example/resource/scoreChi-date.xlsx" target="_blank">學生成績-生日-chinese</a></td>
+  <td><a href="example/resource/scoreChi-group.xlsx" target="_blank">學生成績-分組-chinese</a></td>
+  <td><a href="example/resource/personnel.xlsx" target="_blank">人事資料-chinese</a></td>
+  <td><a href="example/resource/salary-gender.xlsx" target="_blank">男女時薪-chinese</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="example/resource/scoreEng.xlsx" target="_blank">學生成績-english</a></td>
+  <td><a href="example/resource/scoreEngNAN.xlsx" target="_blank">學生成績-有缺值-english</a></td>
+  <td><a href="example/resource/scoreEng-group.xlsx" target="_blank">學生成績-分組-english</a></td>
+  <td><a href="example/resource/books.xlsx" target="_blank">圖書資料-chinese</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">上課用csv</td>
+  <td><a href="example/resource/tips-chi.csv" target="_blank">小費tips-chinese</a></td>
+  <td><a href="example/resource/tips.csv" target="_blank">小費tips-english</a></td>
+  <td><a href="example/resource/scoreChi.csv" target="_blank">學生成績-chinese</a></td>
+  <td><a href="example/resource/scoreEng.csv" target="_blank">學生成績-english</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="example/resource/books.csv" target="_blank">圖書資料-chinese</a></td>
+  <td><a href="example/resource/tips.csv" target="_blank"></a></td>
+  <td><a href="example/resource/scoreChi.csv" target="_blank"></a></td>
+  <td><a href="example/resource/scoreEng.csv" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">上課用其它資料庫</td>
+  <td><a href="example/resource/ch09.rar" target="_blank">mySQL-ch09</a></td>
+  <td><a href="example/resource/student.rar" target="_blank">SQLite-student</a></td>
+  <td><a href="example/resource/score2.json" target="_blank">json-學生成績</a></td>
+  <td><a href="example/resource/personnel.xml" target="_blank">xml-personnel</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">課本商業範例資料庫</td>
+  <td><a href="example/resource/sales.csv" target="_blank">商業銷售分析-sales csv</a></td>
+  <td><a href="example/resource/students.xls" target="_blank">系所生源分析-excel</a></td>
+  <td><a href="example/resource/stock.xlsx" target="_blank">股市分析-台積電聯發科股票線型-excel</a></td>
+  <td><a href="example/resource/ma_res.xlsx" target="_blank">問卷資料分析-excel</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas參考教材</td>
+  <td><a href="https://www.pypandas.cn/docs/getting_started/10min.html#%E7%94%9F%E6%88%90%E5%AF%B9%E8%B1%A1" target="_blank">十分鐘入門 Pandas(英文)</a></td>
+  <td><a href="https://ericfu.me/10-minutes-to-pandas/" target="_blank">十分鐘入門 Pandas(英文)</a></td>
+  <td><a href="https://hackmd.io/@wiimax/10-minutes-to-pandas" target="_blank">10分鐘的Pandas入門-繁中版</a></td>
+  <td><a href="https://github.com/iTenki/10-Minutes-to-pandas" target="_blank">十分鐘入門 Pandas(中文)</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas參考教材</td>
+  <td><a href="https://pandas.liuzaoqi.com/doc/chapter0/10%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8pandas.html" target="_blank">pandas官網全部章節翻譯</a></td>
+  <td><a href="https://finthon.com/data-processing/pandas/" target="_blank">pandas官網全部章節翻譯</a></td>
+  <td><a href="https://www.gairuo.com/p/pandas-tutorial" target="_blank"></a></td>
+  <td><a href="https://ithelp.ithome.com.tw/articles/10193421" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas參考教材(英文)</td>
+  <td><a href="https://www.kaggle.com/code/residentmario/indexing-selecting-assigning" target="_blank">kaggle pandas教學</a></td>
+  <td><a href="https://www.dataschool.io/python-pandas-tips-and-tricks/?fbclid=IwAR03zbqYE1p5Rqs1R1jMfpS_hrYjwTwi1Cls4HYy4Vqj_W_oLf62JkKbkZ4" target="_blank">100 pandas tricks to save you time and energy</a></td>
+  <td><a href="https://pandas.pydata.org/pandas-docs/version/0.22/10min.html" target="_blank">官網0.22.0:pandas documentation</a></td>
+  <td><a href="https://ithelp.ithome.com.tw/articles/10193421" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas參考教材(中文)</td>
+  <td><a href="https://medium.com/datainpoint/pandas101-369caec9870" target="_blank">Pandas 101：資料分析的基石</a></td>
+  <td><a href="https://leemeng.tw/practical-pandas-tutorial-for-aspiring-data-scientists.html" target="_blank">資料科學家的pandas 實戰手冊：掌握40 個實用</a></td>
+  <td><a href="https://blog.techbridge.cc/2020/09/21/python-pandas-zen-tutorial/" target="_blank">簡明 Python Pandas 入門教學</a></td>
+  <td><a href="https://www.learncodewithmike.com/2020/11/python-pandas-dataframe-tutorial.html" target="_blank">資料分析必懂的Pandas DataFrame處理雙維度資料方法</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas速查手冊</td>
+  <td><a href="https://www.gairuo.com/p/pandas-sheet" target="_blank">pandas 速查手册 - 盖若</a></td>
+  <td><a href="https://zhuanlan.zhihu.com/p/25630700" target="_blank">Pandas速查手冊中文版 - 知乎專欄</a></td>
+  <td><a href="https://cloud.tencent.com/developer/article/1094110" target="_blank">Pandas速查手冊中文版- 騰訊雲開發者社區</a></td>
+  <td><a href="https://www.finlab.tw/pandas-%E9%AD%94%E6%B3%95%E7%AD%86%E8%A8%981-%E5%B8%B8%E7%94%A8%E6%8B%9B%E5%BC%8F%E7%B8%BD%E8%A6%BD/" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">pandas速查手冊</td>
+  <td><a href="https://blog.csdn.net/brucewong0516/article/details/81782312" target="_blank">Pandas中DataFrame基本函數整理（全）</a></td>
+  <td><a href="https://www.finlab.tw/pandas-%E9%AD%94%E6%B3%95%E7%AD%86%E8%A8%981-%E5%B8%B8%E7%94%A8%E6%8B%9B%E5%BC%8F%E7%B8%BD%E8%A6%BD/" target="_blank">Pandas 魔法筆記(1)-常用招式總覽</a></td>
+  <td><a href="https://ithelp.ithome.com.tw/articles/10193421" target="_blank">pandas的df的操作函數</a></td>
+  <td><a href="https://cloud.tencent.com/developer/article/1094110" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">資料集dataset</td>
+  <td><a href="https://raw.githubusercontent.com/pandas-dev/pandas/main/pandas/tests/io/data/csv/tips.csv" target="_blank">小費資料集Tips Dataset(csv)</a></td>
+  <td><a href="https://www.kaggle.com/code/sanjanabasu/tips-dataset" target="_blank">kaggle小費資料集範例A Waiter's Tips example</a></td>
+  <td><a href="https://blog.csdn.net/qq_44173974/article/details/116532127" target="_blank">【視覺化】小費（tips）資料集分析</a></td>
+  <td><a href="https://itw01.com/QFN38EZ.html" target="_blank">小費（tips）資料集提取和檢視相應資料 </a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">SQL語法</td>
+  <td><a href="http://cc.cust.edu.tw/~ccchen/doc/db_06.pdf" target="_blank">SQL語法教程</a></td>
+  <td><a href="https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_sql.html" target="_blank">pandas vs SQL</a></td>
+  <td><a href="http://cc.cust.edu.tw/~ccchen/doc/db_06.pdf" target="_blank"></a></td>
+  <td><a href="https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_sql.html" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">資料分析4大模組（runoob)</td>
+  <td><a href="https://www.runoob.com/numpy/numpy-tutorial.html" target="_blank">numpy</a></td>
+  <td><a href="https://www.runoob.com/pandas/pandas-tutorial.html" target="_blank">pandas</a></td>
+  <td><a href="https://www.runoob.com/w3cnote/matplotlib-tutorial.html" target="_blank">matplotlib</a></td>
+  <td><a href="https://www.runoob.com/scipy/scipy-tutorial.html" target="_blank">scipy</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#FFFFFF"></td>
+<td><a href="http://www.w3capi.com/cms/content/id/106/cid/27.html" target="_blank">w3c、w3school、w3cschool、runoob、w3capi比較</a></td>
+<td><a href="https://www.similarweb.com/zh/website/runoob.com/#keywords" target="_blank">runoob流量監控儀表板</a></td>
+<td><a href="https://www.w3schools.com/python/" target="_blank"></a></td>
+<td><a href="https://www.w3school.com.cn/python/index.asp" target="_blank"></a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF">w3school vs runoob</td>
+  <td colspan="5">
+    1.w3school中文版是直接google翻譯英文版<br>
+    2.runoob.com翻譯自英文版w3schools，但重新排版<br>
+    3.runoob = run + noob(菜鳥，小白)<br>
+    4.runoob是python，html，javascript中文版最好的教學網<br>
+    
+  </td>
+</tr>
+
+
+  <tr bgcolor="#f0f0f0">
+      <td bgcolor="#FFFFFF">官網</td>
+      <td class="style11"><a href="https://www.python.org/downloads/windows/" target="_blank">python官網</a></td>
+      <td><a href="https://code.visualstudio.com/" target="_blank">vscode官網</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>        
+  </tr>
+  <tr bgcolor="#f0f0f0">
+      <td bgcolor="#FFFFFF">python 教學網站</td>
+      <td class="style11"><a href="https://docs.python.org/zh-tw/3/tutorial/index.html" target="_blank">python 3(官網手冊中文)</a></td>
+      <td class="style11"><a href="https://www.twcode01.com/python3/python3-tutorial.html" target="_blank">python 3教學(中文)</a></td>
+      <td class="style11"><a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank">python 3教學(中文)</a></td>
+      <td class="style11"><a href="https://kopu.chat/%e4%b8%80%e5%b0%8f%e6%99%82python%e5%85%a5%e9%96%80-part-1/" target="_blank">簡易1小時教學</a></td>
+  </tr>
+  <tr bgcolor="#f0f0f0">
+    <td bgcolor="#FFFFFF"></td>
+       <td><a href="https://www.w3schools.com/python/" target="_blank">w3school(英文版)</a></td>
+       <td>&nbsp;</td>  
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>  
+  </tr>
+  <tr bgcolor="#f0f0f0">
+      <td bgcolor="#FFFFFF">線上執行python online</td>
+      <td colspan="5">
+        <p><a href="https://www.python.org/shell/" target="_blank">https://www.python.org/shell/（建議用這個）</a></p>
+        <p><a href="https://repl.it/languages/python3" target="_blank">https://repl.it/languages/python3</a></p>
+<br>
+        <p><a href="https://www.onlinegdb.com/online_python_compiler" target="_blank">https://www.onlinegdb.com/online_python_compiler</a></p>
+        <p><a href="https://www.tutorialspoint.com/execute_python_online.php" target="_blank">https://www.tutorialspoint.com/execute_python_online.php</a></p>
+      </td>
+  </tr>
+
+  <tr bgcolor="#f0f0f0">
+      <td bgcolor="#FFFFFF">用Anacond寫python(*建議使用)</td>
+      <td colspan="5">
+ <p><a href="https://www.anaconda.com/products/individual" target="_blank">到Anacond官網下載安裝</a></p>
+      </td>
+  </tr>
+
+</table>
+
+<p></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+        <td colspan="6" id="chp1-1">&nbsp;</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td colspan="6">chp1-1.前言</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="chp0-introduction.pptx" target="_blank">1.課程簡介投影片</a></td>
+  <td><a href="chp0-3programmingMethod.pptx" target="_blank">2.學習程式的3種方法</a></td>
+  <td></td>
+  <td></td>
+</tr> 
+<tr bgcolor="#f0f0f0">
+      <td bgcolor="#FFFFFF"></td>
+      <td><a href="#exp01_1">1.現今企業的數據有哪些</a></td>
+      <td><a href="#exp01_2">2.運用數據三階段</a></td>
+      <td><a href="#exp01_3">3.資料生產的四步驟</a></td>
+      <td><a href="#exp01_4">3.資料最基本的三個概念</a></td>
+</tr> 
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="#exp01_5">5.什麼是大數據Big Data</a></td>
+  <td><a href="#exp01_6">6.大數據分析與傳統商業分析的差異</a></td>
+  <td><a href="#exp01_7">7.大數據的分析步驟</a></td>
+  <td><a href="#exp01_8">8.視覺化常用工具</a></td>
+</tr>
+<tr bgcolor="#f0f0f0">
+  <td bgcolor="#FFFFFF"></td>
+  <td><a href="#exp01_9">9.什麼是大數據Big Data</a></td>
+  <td><a href="#exp01_10">10.大數據分析與傳統商業分析的差異</a></td>
+  <td><a href="#exp01_11">11.大數據的分析步驟</a></td>
+  <td><a href="#exp01_12">12.大數據的類型：結構化、非結構化、半結構化資料</a></td>
+</tr> 
+<tr bgcolor="#f0f0f0" id='exp01_1'>
+  <td><p>1.現今企業的數據有哪些</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+1.現今企業的數據有哪些：<br>
+（1）所謂大數據，即是透過不同來源、渠道取得的海量數據資料，<br>
+現今企業如果想做數據蒐集的方法變得非常多元，包括：<br>
+<br>
+<span class="red"> 
+（2）來自用戶的第一方數據：<br>
+☎傳統的用戶資料建檔、問卷調查，<br>
+☎網頁的瀏覽行為等數據的追蹤，<br>
+☎App應用程式的瀏覽行為等數據的追蹤、<br>
+☎物聯網IoT設備傳遞的數據等，<br>
+</span>
+這些都是可以蒐集到。<br>
+<br>
+還有更多可捕捉用戶站外資訊的非第一方數據也漸漸被重視，<br>
+<span class="red"> 
+（3）透過交換共享得到的第二方數據：<br>
+☎第二方數據 （也稱為第二方或 2P 數據）：是另一個同行公司收集的數據，但可由另一家公司通過購買或協作訪問。<br>
+</span>
+☎營銷人員在希望擴展其營銷資料庫以吸引新的潛在客戶時，通常會購買它。<br>
+☎例如，如果一個為女性製作的服裝品牌決定增加一個男裝系列，並且需要相關的目標來行銷，就可以向外同行公司購買男裝的數據資料庫。<br>
+<br>
+<span class="red"> 
+（4）任何與商業需求有關的第三方數據：<br>
+☎第三方數據 （也稱為第三方或3P數據）：是來自第三方的數據，該第三方已聚合了多個數據源並使其可供購買。<br>
+</span>
+☎第三方數據的缺點：是它可能缺乏準確性和品質，因此重要的是了解數據來自何處以及數據使用年限. <br>
+<br>
+<span class="red"> 
+（5）比較：第一方、第二方和第三方數據之間的差別：<br>
+第一方、第二方和第三方數據之間的主要區別在於：『來源』。<br>
+☎第一方數據：由其『存儲/擁有的公司』收集。<br>
+☎第二方數據：由『同行公司』收集，並由另一家公司購買（或通過合作協定與他們共用）。<br>
+☎第三方數據：是從『多個未知來源』收集的，並由一家公司購買。 <br>
+</span>
+<img src="../pandas/pexample/chp01/p01.png"/><br>
+
+<br>
+（6）參考文獻：<br>
+1.<a href="https://sharethis.com/zh-tw/data-topics/2022/10/0-1-2-3-data-types/" target="_blank">第一方、第二方、第三方和零數據對廣告商意味著什麼</a><br>
+2.<a href="https://www.vpon.com/zh-hant/what-is-big-data/" target="_blank">分析大數據在各領域的應用</a><br>
+
+<br>
+</td>
+</tr>
+<tr bgcolor="#f0f0f0" id='exp01_2'>
+  <td><p>2.運用數據三階段</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+1.市場上的數據需求，主要分為四個階段：<br>
+☎數據蒐集、<br>
+☎數據分析、<br>
+☎數據應用<br>
+<br>
+<span class="red"> 
+（1）數據蒐集：蒐集第一方、第二方和第三方數據<br>   
+</span> 
+<br> 
+☎傳統的用戶資料建檔、問卷調查，<br>
+☎網頁的瀏覽行為等數據的追蹤，<br>
+☎App應用程式的瀏覽行為等數據的追蹤、<br>
+☎物聯網IoT設備傳遞的數據等，<br>
+<br>
+☎第二方數據：向同行公司購買數據。<br>
+<br>
+☎第三方數據：向『其他管道，如：數據收集公司』購買。<br>
+
+<br>
+<br>
+<span class="red"> 
+（2）數據分析：原始數據（raw data）要先處理過<br>   
+</span> 
+<br> 
+☎透過多元渠道獲取大量數據資料往往是原始數據（raw data），無法直接使用，<br>
+☎必須經過一層又一層的處理過程<br>
+<span class="red"> 
+☎處理方法1：數據檢查（data inspecting）<br>
+☎處理方法2：數據清理（data cleansing）<br>
+☎處理方法3：數據轉換（data transforming）<br>
+</span>
+<br>
+<br>
+<span class="red"> 
+(2-1)處理方法2：數據清理（data cleansing）<br>
+</span> 
+A.資料清理是資料前處理的第一步，需要先將資料中的問題處理。<br>
+B.收載資料時一定會遇到各式髒資料，有的資料樣態會導致無法轉入資料庫，而有的資料會在塞入資料庫時，出現錯位、亂碼等各式各樣非預期的情況，此時倉儲資料清理的準則變得極為重要，因將攸關於整個系統資料的統一。<br>
+C.資料清理的準則設定可以從三個角度著手：<br>
+<span class="red"> 
+☎「檔案類型」問題的清理<br>
+☎「欄位型態」問題的清理<br>
+☎「資料邏輯」問題的清理<br>
+</span> 
+D.☎數據清洗：按照一定的規則剔除或者填充不滿足實際需要的業務資料。<br>
+E.☎清洗主要包括三部分的內容：<br>
+第一部分是測試資料、<br>
+第二個是錯誤的資料，<br>
+第三個是缺失的資料。<br>
+錯誤的資料我們可以關注：『資料是否重複』、格式是否『錯誤、欄位描述』的資訊是否錯誤。<br>
+<br>
+<img src="../pandas/example/chp01/p02.png"/><br>
+<img src="../pandas/example/chp01/p03.jpg"/><br>
+<br>
+<br>
+<span class="red"> 
+D.(2-1-a)例如：資料來源檔案類型：純文字檔<br>
+</span> 
+☎資料內容以純文字的方式儲存的特色：<br>
+欄位與欄位之間以特定符號作為分隔，<br>
+例如：逗號、分號或｜等等，<br>
+☎較常被使用的是「逗號」<br>
+<br>
+<span class="red"> 
+☎可能發生的問題：<br>
+然而使用各符號作為分隔時，會遇到其中一種情況是：以逗號為例，如該欄位內容包含逗號，將會造成欄位內容分割時發生錯誤，但此逗號明明屬於資料的內容，卻被誤認為是分隔符號，使得分割完的資料對應到錯誤的欄位<br>
+<br>
+☎解決的辦法：<br>
+將內容值前後都加上雙引號後，再以逗號分隔串連各欄位資料<br>
+</span> 
+<br>
+<br>
+<span class="red"> 
+D.(2-1-a)例如：檔案類型：資料庫<br>
+</span> 
+☎讀取資料庫文字欄位型態的資料時，內容包含換行符號，系統就認為這筆資料已經讀取完，則換行符號後面的資料內容即為下一筆資料的開頭，無法完整的將一筆資料讀取進來。<br>
+☎解決辦法：是移除換行符號，若需要保留換行符號，<br>
+<br>
+<br>
+<span class="red"> 
+D.(2-1-b)例如：欄位型態：日期<br>
+</span> 
+☎格式：同時出現以 斜線分隔(YYYY/MM/DD)、無分隔符號(YYYYMMDD) 或 連接號(YYYY-MM-DD) 的日期格式。<br>
+☎處理方式：透過判斷式將內容使用的符號，或沒有符號的純文字格式，換成資料庫可接受的日期格式。<br>
+<br>
+☎西元年/民國年：同一欄位參雜西元年與民國年的日期。<br>
+☎處理方式：若以西元年格式存入資料庫，年若小於1911，則將 年份+1911 ；年若大於1911，則直接轉入。<br>
+<br>
+☎值異常：例如日期出現2月30日、年份早於1911年等，或是不可為NULL的欄位卻出現NULL值等非正常的日期。<br>
+☎處理方式：異常的日期通常已經無法追溯到正確的值，或來源的日期就是髒資料，可統一為特定日期(如：1911年1月1日)，日後看到即可確定來源的資料因有異常而清理過。<br>
+<br>
+<br>
+<span class="red"> 
+D.(2-1-b)例如：欄位型態：特殊字元<br>
+</span> 
+☎說明：文字是最容易造成轉檔失敗的型態，因為此型態可容許輸入任何類型的字元，例如：特殊字元，但資料庫本身並非接納的了所有字元，較特別的會無法轉入，或需要做其他特殊的轉換才能收載。<br>
+☎處理方式：必須找出那一筆，替換掉『特殊字元』後，再登錄進資料庫。<br>
+<br>
+<br>
+<span class="red"> 
+D.(2-1-c)例如：資料邏輯：縣市代碼<br>
+</span>
+☎台灣曾經經歷過縣市升格為直轄市，有更換過縣市的中文名稱，那麼資料也須跟著配合調整。<br>
+☎處理方式：是做一張新舊對照縣市代碼與名稱的轉換表，日後資料若有縣市資訊需求，即可勾稽此資料表，讓縣市升格前與後的資料，能自由並適當的轉換，得到想要的資訊。<br>
+<br>
+<br>
+<span class="red"> 
+D.(2-1-c)例如：資料邏輯：身分證號的規則判斷<br>
+</span>  
+☎身分證號的編碼有固定的規則，<br>
+第一碼是初次戶籍所在的縣市代碼，<br>
+第二碼是性別(1：男性；2：女性)，<br>
+第三到九碼是流水碼，<br>
+最後一碼第十碼是檢查碼，檢查碼會以第一到第九碼之英數字組合經過權重計算而得。<br>
+☎若要確認身分證是否有效，可依據這些規則去做判斷。<br>
+<br>
+<br>
+<span class="red"> 
+(2-3)處理方法3：數據轉換（data transforming）<br>
+</span> 
+A.☎數據轉化：按照一定的規則、技術手段轉化不同格式，或者顆粒度不同的資料。<br>
+B.（1）例如：格式的轉換，比如說時間格式，在不同的業務系統可能會有不同的時間格式，但是到我們大資料系統，為了方便下游資料的使用，我們會統一轉換成一種資料格式。包括一些欄位編碼也是這樣。<br>
+C.（2）資料顆粒度的轉換：我們在DW層的資料明細層到資料應用層的整個過程，都是顆粒度不斷轉化的一個過程。還包括一些業務規則、商務規則和一些指標。<br>
+<img src="../pandas/example/chp01/p03.jpg"/><br>
+<br>
+☎補充：數據顆粒度：資料顆粒度指數據的細緻程度。<br>
+資料顆粒度越高，細緻程度越高，意味著可以進行更準確的分析。<br>
+然而，需要指出的是，資料顆粒度直接決定資料庫需要的儲存空間。<br>
+高顆粒度的資料需要更多儲存空間；如果資料顆粒度太高，能夠識別出背後的資料，隱私相關挑戰也會加大。
+
+
+<br>
+<br>
+（4）參考文獻：<br>
+1.<a href="https://www.dtstack.com/bbs/article/92" target="_blank">資料指標體系（1）如何理解資料顆粒度、維度以及指標</a><br>
+
+<br>
+</td>
+</tr>
+<tr bgcolor="#f0f0f0" id='exp01_3'>
+  <td><p>3.資料生產的四步驟</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+1.資料生產的四步驟：<br>
+•	資料指標體系搭建<br>
+•	資料獲取<br>
+•	資料存儲<br>
+•	數據清洗<br>
+<br>
+2.建立資料後，即可開始資料分析<br>
+<br>
+</td>
+</tr>
+<tr bgcolor="#f0f0f0" id='exp01_4'>
+  <td><p>4.資料最基本的三個概念</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+1.資料最基本的三個概念：<br>
+☎顆粒度<br>
+☎維度<br>
+☎指標<br>
+<br>
+<span class="red"> 
+（1）顆粒度<br>   
+</span>      
+☎資料的顆粒度是指數據的 “粗細”，也就是我們看資料的視野的大小，或者說格局的大小。<br>
+☎例如：<br>
+一個電商公司，同樣是看GMV（總銷售額），CEO關注的可能是『今年總的GMV』是多少，<br>
+而業務老闆關注的可能是『每月的GMV』如何，<br>
+具體到某個小團隊，關注的點可能就是某些商品，『每天的GMV』如何了。<br>
+<br>
+☎資料顆粒度最常見的劃分是：時間<br>
+<br>
+<br>
+<span class="red"> 
+（2）維度<br>   
+</span>   
+☎資料的維度：是指看待事物不同的角度。<br>
+☎是從不同角度來看一件事，會得到不同的結論。<br>
+☎在做資料分析時也是一樣的。分析一個活動，或者一個策略對用戶的吸引時，如果我們以『新增用戶數』作為分析的指標（也就是展開方式，分析點），<br>
+<br>
+☎可以列為『維度』進行拆分的項目：<br>
+•	時間維度：拆分為早晨、中午、晚上<br>
+•	性別維度：男性、女性、未知<br>
+•	受教育程度：小學、中學、大學、研究生、博士<br>
+☎通過維度的分解，我們可以看到每個部分的變動，和整體的變化趨勢是否相同，是否存在不同，而哪些不同點往往會成為我們接下來分析的重點。<br>
+<br>
+☎顆粒度和維度的『相似性』：例如“時間”這個要素，在兩個部分都出現了<br>
+☎顆粒度和維度的『差異性』：不同在於拆分的方式不同<br>
+•	顆粒度：是一種縱向的聚合，類似於金字塔的形狀，不同的顆粒度都代表著不同的聚合程度<br>
+•	維度：是一種橫向拆分的模式。類似于把鏡子打碎成不同的部分，每個部分都是獨立的，把所有部分合在一起又能拼成完整的整體<br>
+<br>
+
+<br>
+<span class="red"> 
+(2-1)指標<br>
+</span>  
+☎資料指標：是衡量事物發展方式及程度的一種單位或者方法，一般通過對原始資料進行加減乘除等操作生成得到。<br>
+☎例如：長度，是把所有部分加在一起得到的一種衡量外在大小的單位。<br>
+<br>
+☎列舉一些常見網路流量的資料指標：<br>
+•	DAU（daily active user）：每天，“活躍”過的用戶數的加總，count(distinct user_id) group by day<br>
+•	MAU（monthly active user）：每個月，“活躍”過的用戶的加總，count(distinct user_id) group by month<br>
+•	留存率（次日、7日、30日）：今天“活躍”過的用戶的總量，一段時間後的某個時間點，還活躍的比例<br>
+•	轉化率：兩個有遞進的環節之間，從上層到下層用戶轉化的比例，例如：CTR=實際點擊次數/展示量<br>
+<br>
+
+<br>
+<br>
+（4）參考文獻：<br>
+1.<a href="https://www.gss.com.tw/blog/%E5%A4%A7%E6%95%B8%E6%93%9A%E5%89%8D%E7%9A%84%E8%B3%87%E6%96%99%E6%B8%85%E7%90%86" target="_blank">大數據前的資料清理</a><br>
+2.<a href="https://www.vpon.com/zh-hant/what-is-big-data/" target="_blank">分析大數據在各領域的應用</a><br>
+
+<br>
+</td>
+</tr>    
+<tr bgcolor="#f0f0f0" id='exp01_5'>
+  <td><p>5.什麼是大數據Big Data</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+<span class="red"> 
+1.為什麼有大數據的問題<br>   
+</span> 
+現在的企業資料，因為以下的興起，造成大量數據的需求：
+☎網路網路資料（社交網站，交易資料）<br>
+☎物聯網IoT, Internet of Things<br>
+☎感測器sensor<br>
+
+<br>
+<br>
+<span class="red"> 
+2.大資料的來源<br>   
+</span>      
+資料來源主要分為以下三類： <br> 
+（1）社交數據：<br>
+☎顧名思義，社交資料來源於社交媒體評論、發帖、圖片以及與日俱增的視頻檔。隨著全球 4G 和 5G 蜂窩網路的普及，到 2023 年，全球手機視頻使用者將增至 27.2 億。<br>
+☎雖然社交媒體及其使用趨勢瞬息萬變、難以預測，但作為數位資料的主要來源，其穩定增長趨勢是不會改變的。<br>
+<br>
+（2）機器數據：<br>
+☎物聯網設備和機器都配有感測器，能夠發送和接收數位資料。物聯網感測器能夠幫助企業採集和處理來自整個企業的設備、工具和裝置的機器資料。<br>
+☎從天氣和交通感測器到安全監控，全球範圍內的資料生成設備正在迅速增多。<br>
+☎據 IDC 估計，到 2025 年，全球物聯網設備數量將超過 400 億，生成的資料量幾乎占全球數位資料總量的一半。<br>
+<br>
+（3）交易資料：<br>
+☎交易資料是世界上發展速度和增長速度最快的資料。<br>
+☎例如，一家大型國際零售商每小時處理超過 100 萬筆客戶交易，全球那麼多採購和銀行交易，生成的資料量會有多麼驚人。<br>
+☎此外，交易資料越來越多地由『半結構化』資料組成，包括圖片和注釋等，使得管理和處理難度不斷增加。  <br>
+<img src="../pandas/example/chp01/p04.png"/><br>
+<br>
+<br>
+<span class="red"> 
+3.大數據的五大特性：<br>   
+</span> 
+<br>
+<span class="red"> 
+（1）大數據的3V特性：
+☎資料量（Volume）<br>
+☎資料類型（Variety）。<br>
+☎資料傳輸速度（Velocity）<br>
+</span> 
+<img src="../pandas/example/chp01/p05.png"/><br>
+☎Volume（資料量）
+無論是天文學、生物醫療、金融、聯網物間連線、社群互動…每分每秒都正在生成龐大的數據量，如同上述所說的 TB、PB、EB 規模單位。<br>
+<br>
+☎Variety（資料多元性）<br>
+真正困難的問題在於分析多樣化的資料：從文字、位置、語音、影像、圖片、交易數據、類比訊號… 等結構化與非結構化包羅萬象的資料，彼此間能進行交互分析、尋找數據間的關聯性。<br>
+<br>
+☎Velocity（資料即時性）<br>
+大數據亦強調資料的時效性。隨著使用者每秒都在產生大量的數據回饋，過去三五年的資料已毫無用處。<br>
+一旦資料串流到運算伺服器，企業便須立即進行分析、即時得到結果並立即做出反應修正，才能發揮資料的最大價值。<br>
+<br>
+<br>
+（2）大數據的4V特性：<br>
+<span class="red"> 
+☎資料量（Volume）<br>
+☎資料類型（Variety）<br>
+☎資料傳輸速度（Velocity）<br>
+☎資料真實性（Veracity）<br>
+</span> 
+在3V成為大數據的主要定義後，隨著儲存資料的成本下降、取得成本也下降，大數據發展出第四個特性：Veracity，意旨除了資料量，也需要確認資料的真實性，過濾掉造假的數據與異常值後，分析出來的結果才能達到準確預測的目的。
+<img src="../pandas/example/chp01/p05.png"/><br>
+<br>
+<br>
+<br>
+（3）大數據的5V特性：<br>
+<span class="red"> 
+☎資料量（Volume）<br>
+☎資料類型（Variety）<br>
+☎資料傳輸速度（Velocity）<br>
+☎資料真實性（Veracity）<br>
+
+☎價值（Value）<br>
+大量、快速取得，來源多樣的資料，經過真實性考驗之後，擁有一定的價值，是大數據的核心架構<br>
+</span>
+<img src="../pandas/example/chp01/p07.jpg"/><br>
+<img src="../pandas/example/chp01/p08.jpg"/><br>
+<br>
+<br>
+<span class="red"> 
+4.多大的資料量才算大數據Big Data<br>
+</span>  
+☎資料量要多大才能說是大數據？<br>
+根據維基百科的定義，資料大小從幾TB（Terabyte）到幾PB（Petabyte）不等<br>
+<img src="../pandas/example/chp01/p06.png"/><br>
+
+<br>
+
+<br>
+<br>
+5參考文獻：<br>
+(1).<a href="https://www.sap.cn/insights/what-is-big-data.html" target="_blank">什麼是大數據</a><br>
+(2).<a href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%95%B8%E6%93%9A" target="_blank">巨量資料(wiki)</a><br>
+(3).<a href="https://www.inside.com.tw/feature/ai/9745-big-data" target="_blank">大數據到底是什麼意思？事實上，它是一種精神</a><br>
+(4).<a href="https://www.largitdata.com/blog_detail/20190725" target="_blank">認識大數據定義、分析與工具</a><br>
+(5).<a href="https://www.techbang.com/posts/39331-data-optimize-your-life-in-perspective-not-only-is-a-lot-of-data" target="_blank">大數據，不只是很大的數據</a><br>
+
+<br>
+</td>
+</tr>    
+<tr bgcolor="#f0f0f0" id='exp01_6'>
+  <td><p>6.大數據分析與傳統商業分析的差異</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+<span class="red"> 
+1.大數據分析與傳統商業分析的差異<br>   
+</span> 
+<img src="../pandas/example/chp01/p09.jpg"/><br>
+（1）大數據分析：<br>
+☎分析方法：使用原始資料➜統計分析➜產生視覺化圖表➜產生報表<br>
+☎使用技術：原始資料，大數據，使用程式碼(python/R)進行結構化分析<br>
+☎預測方法：找出數據間的關聯性➜建立預測模型➜完成預測<br>
+
+
+
+<br>
+2.參考文獻：<br>
+(1).<a href="https://www.techbang.com/posts/39331-data-optimize-your-life-in-perspective-not-only-is-a-lot-of-data" target="_blank">大數據，不只是很大的數據</a><br>
+
+<br>
+</td>
+</tr>     
+<tr bgcolor="#f0f0f0" id='exp01_7'>
+  <td><p>7.大數據的分析步驟</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+<span class="red"> 
+1.大數據的分析步驟：取得，儲存，運算，視覺化<br>   
+</span> 
+<img src="../pandas/example/chp01/p10.jpg"/><br>
+☎大數據分析第一步：取得<br>
+數據隨時隨地都在產生，就連你上班時的行走路線，都可以成為商家選擇新店地址的參考資料。若是擁有大量使用者的企業，蒐集使用者的活動紀錄就可達到以數據預測未來的目標；若是較小型的企業，則可主動邀請使用者填寫問卷，逐步累積資訊量。<br>
+<br>
+☎大數據分析第二步：儲存<br>
+由於資料量龐大，突破儲存技術式處理大數據的第一個難關。因此處理大數據時多使用分散式處理系統，透過分割資料與備份儲存，突破記憶體過小的障礙。<br>
+<br>
+☎大數據分析第三步：運算<br>
+為達成預測未來的目的，機器可以透過分類、迴歸分析、排序、關聯分析等方式找出其中規律，並運用決策樹、遺傳演算法、人工神經網路等模型進行計算。<br>
+<br>
+☎大數據分析第四步：視覺化<br>
+經過分析後的數據仍是數字與列表，不易閱讀。因此可搭配視覺化工具，將數據轉化為較容易閱讀與理解的形式。<br>
+
+
+
+<br>
+2.參考文獻：<br>
+(1).<a href="https://www.largitdata.com/blog_detail/20190725" target="_blank">認識大數據定義、分析與工具</a><br>
+
+<br>
+</td>
+</tr>  
+<tr bgcolor="#f0f0f0" id='exp01_8'>
+  <td><p>8.視覺化常用工具</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+<span class="red"> 
+1.三大視覺化工具：Power BI，Tableau，Data Studio<br>  
+功能：都能夠製作Dashboard（互動儀表板，報表平台）<br>
+</span> 
+<img src="../pandas/example/chp01/p11.png"/><br>
+<br>
+（1）Power BI：微軟Microsoft<br>
+（1-1）費用：<br>
+☎免費版：若要編輯或瀏覽 Power BI Dashboard 僅能確保每個使用者都有在桌面下載 Power BI。<br>
+但免費PC版 Power BI 僅能在 Windows 上使用，<br>
+Mac 使用者僅能夠過網頁/付費方式使用<br>
+☎付費版：Power BI 可透過企業全體購買 Pro License（每個月300元），進而能夠做到網頁版共用。<br>
+<br>
+☎付費版：公司內可以購買整個 Office 365 package（已經包含 Power BI Pro License），以利內部資料互通，大家也不用另外在電腦下載應用程式，直接網路編輯與瀏覽即可，Mac 使用者也能進而編輯<br>
+☎付費版：Power BI Premium，每月每個人600元。<br>
+☎<a href="https://powerbi.microsoft.com/zh-tw/pricing/" target="_blank">Power BI定價參考網址</a><br>
+
+<br>
+（1-2）功能：<br>
+Power BI 基本上功能與Tableau大同小異。<br>
+Power BI的操作比較簡單，更直覺化（Tableau操作較複雜）。<br>
+Power BI同時可支援 Python & R 的視覺化工具，<br>
+Power BI 的 DAX 語法相較 Tableau 好懂。<br>
+<br>
+<br>
+<span class="red"> 
+（2）Tableau<br>
+</span>
+（2-1）費用：<br>
+☎Tableau Public 是一個免費的平台<br>
+☎Tableau Prep 免費試用30天<br>
+☎Tableau Desktop 免費試用14天<br>
+☎Tableau Server 免費試用<br>
+☎CRM Analytics（原稱 Tableau CRM）<br>
+<a href="https://www.largitdata.com/blog_detail/20190725" target="_blank">認識大數據定義、分析與工具</a><br>
+☎Tableau 在企業級規模部署時Power BI比較便宜，因為雖然Power BI 隨附於O365中，但若要企業級部署，考慮Power BI Pro與Power BI Premium 間的功能差距，若真的要能做到 Tableau Server 大部分的功能，是一定需要 Premium 的，不然會受到算力、數據量大小、協作功能等的差距影響，很難做到企業級部署。<br>
+而Power BI Premium 在2021/02時所記錄的起始報價為 台幣 150,120。<br>
+Tableau的產品生態：<img src="../pandas/example/chp01/p13.png"/><br>
+<br>
+<br>
+（2-2）功能：<br>
+☎功能強大。<br>
+☎2020/01年時統計，世界500強企業裡面96%是Tableau的客戶。<br>
+<br>
+<br>
+<span class="red"> 
+（3）Data Studio<br>
+</span>
+（3-1）費用：<br>
+☎google雲端軟體，完全免費的平台<br>
+<br>
+（3-2）功能：<br>
+☎優點：因為 Google 產品大多都是可開權限共享，<br>
+所以要結合Google 其他應用程式（Big Query, Google Analytics），就可以直接串接到 Data Studio，因為便利而使用它。<br>
+☎優點：雲端使用，是目前線上最流暢的（因為google產品都是雲端產品），而且可以共同編輯<br>
+☎缺點：功能性而言，現在 Data Studio 在細節調整上還是略輸 Power BI 與 Tableau 一些<br>
+<br>
+<br>
+<span class="red"> 
+2.BI（Business Intelligence,商業智慧）市場分成2類：<br>  
+（1）自助式分析組別：<br>
+組織裡面每個人都有能力利用此組別內的BI工具連接數據與探索數據，發表屬於自己的數據見解<br>
+例如：Power BI，Tableau，Data Studio<br>
+<br>
+（2）報表組別：<br>
+大部份情況之下，因需要撰寫大量函式或需要寫SQL，需要由統一專業部門開發，如IT單位<br>
+例如：Finereport，Microstrategy<br>
+</span> 
+<img src="../pandas/example/chp01/p14.png"/><br>
+<br>
+<br>
+3.參考文獻：<br>
+(1).<a href="https://www.runinbase.com/post/bicomparison" target="_blank">Tableau 與 Power BI 完整比較指南</a><br>
+(4).<a href="https://www.bianalyst-gt.com/post/tableauvs-powerbi%EF%BC%9F%E5%95%86%E7%AE%A1%E5%AD%B8%E7%94%9F%E6%89%BE%E5%88%86%E6%9E%90%E9%A0%98%E5%9F%9F%E5%AF%A6%E7%BF%92%EF%BC%8C%E8%A9%B2%E5%A6%82%E4%BD%95%E6%BA%96%E5%82%99" target="_blank">Tableau VS. PowerBI</a><br>
+
+<br>
+</td>
+</tr>  
+<tr bgcolor="#f0f0f0" id='exp01_9'>
+  <td><p>9.大數據的類型：結構化、非結構化、半結構化資料</p></td>
+  <td colspan="5" bgcolor="#FFFFFF">
+<span class="red"> 
+1.大數據的類型：結構化、非結構化、半結構化資料 <br>
+</span> 
+<img src="../pandas/example/chp01/p15.png"/><br>
+<img src="../pandas/example/chp01/p16.png"/><br>
+<img src="../pandas/example/chp01/p17.png"/><br>
+<br>
+（1）結構化資料：這類資料最容易整理和搜索，<br>
+☎主要包括：財務資料、機器日誌、人口統計明細等。<br>
+結構化資料很好理解，類似於 Excel 試算表中預定義的行列佈局。<br>
+這種結構下的資料很容易分門別類，資料庫設計人員和管理員只需要定義簡單的演算法就能實現搜索和分析。<br>
+不過，即使結構化資料數量非常大，也不一定稱得上大資料，因為結構化資料本身比較易於管理，不符合大資料的定義標準。<br>
+一直以來，資料庫都是使用 SQL 程式設計語言管理結構化資料。<br>
+SQL 是由 IBM 在 20 世紀 70 年代開發的。<br>
+<br>
+（2）非結構化資料：<br>
+☎因為web2.0盛行後產生很多非結構資料。<br>
+☎（web 2.0內容：透過網路應用，以使用者為中心，促進網路上人與人間的資訊交換和協同合作）<br>
+☎（web 2.0範例：網路社群、網路應用程式、社群網站、部落格、Wiki）<br>
+☎資料包括：社交媒體內容、音訊檔、圖片、開放式客戶評論等。<br>
+☎這些資料符合大數據定義中：『大而複雜』的要求，也因此這些資料通常很難用標準的行列關係型數據庫捕獲。<br>
+大多數情況下企業若想搜索、管理或分析大量非結構化資料，只能依靠繁瑣的手動流程。<br>
+毫無疑問，分析和理解這類資料能夠為企業帶來價值，但是執行成本往往太過高昂。而且，由於耗時太長。<br>
+但是因為無法存儲在試算表或關係型數據庫中，所以非結構化資料通常存儲在資料湖、資料倉庫和 NoSQL 資料庫中。<br>
+<br>
+（3）半結構化資料：<br>
+☎半結構化資料是結構化資料和非結構化資料的混合體。<br>
+☎例如：電子郵件，<br>
+因為其中的正文：屬於非結構化資料，<br>
+而寄件者、收件人、主題和日期：屬於結構化資料。<br>
+使用地理標記、時間戳記或語義標記的設備也可以同時提供結構化資料和非結構化內容。<br>
+<br>
+
+<br>
+3.參考文獻：<br>
+(1).<a href="https://www.sap.cn/insights/what-is-big-data.html" target="_blank">什麼是大數據</a><br>
+(2).<a href="https://zh.wikipedia.org/zh-tw/Web_2.0" target="_blank">web 2.0</a><br>
+(4).<a href="https://www.bianalyst-gt.com/post/tableauvs-powerbi%EF%BC%9F%E5%95%86%E7%AE%A1%E5%AD%B8%E7%94%9F%E6%89%BE%E5%88%86%E6%9E%90%E9%A0%98%E5%9F%9F%E5%AF%A6%E7%BF%92%EF%BC%8C%E8%A9%B2%E5%A6%82%E4%BD%95%E6%BA%96%E5%82%99" target="_blank">Tableau VS. PowerBI</a><br>
+
+<br>
+</td>
+</tr>  
+<tr bgcolor="#f0f0f0">
+  <td colspan="6">&nbsp;</td>
+</tr>
+</table>
+
+
+
+<p  id="chp1-2"></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+            <td colspan="6">&nbsp;</td>
+</tr>
+          <tr bgcolor="#f0f0f0">
+            <td colspan="6">
+              <h2 class="black">範例1-2.數據分析3部曲，與對應的工作職缺</h2>
+
+            <h2 class="red">（1）研究數據分析的3步驟圖：<br>
+            ☎步驟1：學習基礎數據分析1：pandas<br>
+            ☎步驟2：學習基礎數據分析2：SQL<br>
+            ☎步驟3：學習進階數據分析3：人工智慧（機器學習，深度學習） 
+            </h2>
+            <img src="../pandas/pic/scope12.png" /><br>
+            <br>
+            <h2 class="red">（2）數據分析的相關工作職缺（數據分析職位的技能光譜圖）：<br>
+              ☎工作職稱：DA/BA/DS/DE：<br>
+              Business Analyst商業分析師（商業決策建議）<br>
+              Data Engineer數據工程師（基礎第一線數據處理）<br>
+              Data Analyst資料分析師（適用各領域的數據處理工作）<br>
+              Data Scientist資料科學家（建模，人工智慧）
+            </h2>
+            <img src="../pandas/pic/scope3.png" /><br>
+            <br>
+            <br>
+            <h2 class="red">（3）商業分析決策的4步驟圖：<br>
+              ☎1.資料處理<br>
+              ☎2.資料分析<br>
+              ☎3.資料視覺化<br>
+              ☎4.商業分析決策
+            </h2>
+            <img src="../pandas/pic/scope2.png" /><br>
+            <br>
+            <br>
+            <h2 class="red">（4）資料分析常用工具：<br>
+              ☎1.python/pandas<br>
+              ☎2.SQL<br>
+              ☎3.power BI，tableau<br>
+              ☎4.機器學習，深度學習
+            </h2>
+            <img src="../pandas/pic/scope6.png" /><br>
+            <img src="../pandas/pic/scope4.png" /><br>
+
+            </td>
+          </tr>
+
+        <tr bgcolor="#f0f0f0">
+            <td><p></p></td>
+            <td colspan="5" bgcolor="#FFFFFF"><p>
+              </p></td>
+        </tr>  
+</table>
+
+
+<p  id="chp1-3"></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+            <td colspan="6">&nbsp;</td>
+</tr>
+          <tr bgcolor="#f0f0f0">
+            <td colspan="6">
+              <h2 class="black">範例1-3.數據分析常用工具</h2>
+            <br>
+            <h2 class="red">（1）資料分析常用工具：<br>
+              ☎1.python/pandas<br>
+              ☎2.SQL<br>
+              ☎3.power BI，tableau<br>
+              ☎4.機器學習，深度學習<br>
+            </h2>
+            <img src="../pandas/pic/scope6.png" /><br>
+            <img src="../pandas/pic/scope4.png" />
+            <br>
+            <br>
+            <h2 class="red">（2）數據相關工具的職缺數排行榜2016：<br>
+            </h2>
+            <img src="../pandas/pic/scope8.png" /><br>
+            <img src="../pandas/pic/scope9.png" /><br>
+            <img src="../pandas/pic/scope10.png" />
+            <br>
+            <br>
+            <h2 class="red">（3）數據相關工具的職缺數排行榜2020：<br>
+            </h2>
+            <img src="../pandas/pic/scope11.png" /><br>
+
+
+            </td>
+          </tr>
+
+        <tr bgcolor="#f0f0f0">
+            <td><p></p></td>
+            <td colspan="5" bgcolor="#FFFFFF"><p>
+              </p></td>
+        </tr>  
+</table>
+
+
+<p  id="chp1-4"></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+            <td colspan="6">&nbsp;</td>
+</tr>
+          <tr bgcolor="#f0f0f0">
+            <td colspan="6">
+              <h2 class="black">範例1-4.數據相關的證照</h2>
+            <br>
+            <h2 class="red">（1）資料分析相關的證照：<br>
+              <br>
+              <a href="https://www.cerps.org.tw/zh-TW/category/2022-03-07%2009:48:08" target="_blank">☎1.中華企業資源規劃學會，大數據分析師</a><br>
+              <a href="https://www.cerps.org.tw/zh-TW/article/2022-03-07%2009:48:08/220307_030044" target="_blank">☎2.商用數據應用師</a><br>
+              
+            </h2>
+
+            </td>
+          </tr>
+
+        <tr bgcolor="#f0f0f0">
+            <td><p></p></td>
+            <td colspan="5" bgcolor="#FFFFFF"><p>
+              </p></td>
+        </tr>  
+</table>
+
+
+
+
+<p  id="chp1-5"></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+            <td colspan="6">&nbsp;</td>
+</tr>
+          <tr bgcolor="#f0f0f0">
+            <td colspan="6">
+              <h2 class="black">範例1-5.數據分析的內容是什麼？</h2>
+            <br>
+            <h3 class="red">
+              <a class="purple">數據分析的內容主要分三種（統計，比較，預測）<br>
+                （統計出現次數，分類比較，預測趨勢）</a></p>
+             <br>
+              <p><a class="font-weight-bold" >【一，基礎數據分析（python/pandas）】</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1ZOHq-v0VBzXHQmU0N_UMAUJNcuW9NMTE?usp=share_link" target="_blank">1.查詢資料(1)</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1ABIP_Qf96uvaiIAYQyV1LrbG86k-AGGq?usp=share_link" target="_blank">1.查詢資料(2)</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1Eq4OToauvNLM71yR-VlfWcO2L9TcLFD4?usp=share_link" target="_blank">1.查詢資料(3)</a></p>
+
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1sNzKwCHcogvbk79hI5Y4njUKYUfsBh91?usp=share_link" target="_blank">2.頻數分析，統計數量</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1eYgsVD9YHiQdAsjCUZsbSNyCHFOwl6A4?usp=share_link" target="_blank">3.(分1群)比較分析</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1o34n0eFYiCRk0fUmx92jJOjC48Pf1FyQ?usp=share_link" target="_blank">4.描述性統計分析，直方圖，箱型圖</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1GHBWDV2HEAozPwkfAeng33s5Ilqr34y6?authuser=4" target="_blank">6.(分2群)交叉分析表，樞紐分析表</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1UA-ztAg9e0AMOik3n6jDsW-9D-9Ff8qC?usp=sharing" target="_blank">7.分群分析的5種題型</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1P2xPp88pMrEBoqZK8EMLyW-62t1WeQTp?usp=sharing" target="_blank">8.樞紐分析表，交叉分析圖的花式變化與進階技巧</a></p>
+              <br>
+              <br>
+              <p><a class="font-weight-bold" >【二，進階數據分析（機器學習/深度學習）】</a></p>
+
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1gAsPu9kCFH-tv45TVDvN5DDYSuu63ueo?usp=sharing" target="_blank">11.關聯性分析association</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1LZojOJGEx4KpRPYGEzFWhVbQkeAdPJcg?usp=sharing" target="_blank">12.迴歸預測分析regression</a></p>
+              <p style="text-indent: 60px;"><a href="https://colab.research.google.com/drive/1tGkaWWKK6eyMC8hHxtTATjE2jfE24Kjd?usp=sharing" target="_blank">13.分類預測classification</a></p>
+            
+            </h3>
+
+            </td>
+          </tr>
+
+        <tr bgcolor="#f0f0f0">
+            <td><p></p></td>
+            <td colspan="5" bgcolor="#FFFFFF"><p>
+              </p></td>
+        </tr>  
+</table>
+
+
+
+<p></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+   <tr bgcolor="#f0f0f0">
+            <td colspan="6" id="chp1">&nbsp;</td>
+   </tr>
+    <tr bgcolor="#f0f0f0">
+      <td colspan="6">chp1.安裝與使用python的四種方法</td>
+    </tr>
+    <tr bgcolor="#f0f0f0">
+         <td bgcolor="#FFFFFF"></td>
+         <td><a href="#exp1-2a">1.使用python的四種方法</a></td>
+         <td><a href="#exp1-2b">2.Anaconda下載點</a></td>
+         <td><a href="#exp1-2c">3.安裝anaconda</a></td>
+         <td><a href="#exp1-2d">4.Anaconda cmd指令</a></td>
+    </tr> 
+    <tr bgcolor="#f0f0f0">
+         <td bgcolor="#FFFFFF"></td>
+         <td><a href="#exp1-2e">5.建立Anaconda虛擬環境</a></td>
+         <td><a href="#exp1-2f">6.使用Spyter編譯器</a></td>
+         <td><a href="#exp1-2g">7.網頁版python編輯器jupyter notebook</a></td>
+         <td><a href="#exp1-2h">8.其它線上雲端可編譯的python平台</a></td>
+
+    </tr> 
+    <tr id='exp1-2ab'>
+      <td class="table-secondary"><p>1.前言</p></td>
+      <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+Python堪稱是大數據與AI時代的最重要程式語言，在資料處理上有著非常重要的地位。而隨著AI的興起，讓傳統的零售業、金融業、製造業、旅遊業，以及政府都爭相投入，無不希望能運用數據分析與預測來協助決策方向，也讓新興的數據分析師、資料分析師成為熱門職業，因此本課程將講解如何使用網絡爬蟲技術以掌握資料爬取分析、視覺化呈現，以及儲存交換應用的關鍵技術。<br>
+<br>
+Python資料處理的三大技術分別是：擷取分析、視覺化呈現與儲存應用。
+<br>而其應用的範疇包括：網路爬蟲、資料正規化、資料視覺化、資料儲存與讀取(CSV、Excel、Google試算表、SQLite、MySQL)、批次檔案下載、公開資料應用、API建立、驗證碼辨識。
+
+</td> 
+   </tr>
+
+    <tr id="exp1_1">
+      <td class="table-light"><p>Python大數據分析最重要的四個模組</p></td>
+      <td class="table-light" colspan="5" bgcolor="#FFFFFF"><p>
+1.Python大數據分析最重要的四個模組<br>
+Python資料分析最重要的四個模組：pandas、numpy、scipy、matplotlib。<br>
+<br>
+（1）pandas：是基於numpy的資料分析工具，能夠快速的處理結構化資料的大量資料結構和函數。<br>
+pandas模組應該是python用來進行一般日常的大數據分析，最重要的模組了。<br>
+因為pandas的DataFrame資料結構，可以快速的互通於所有的二維結構資料，包括『excel，csv，json，xml，mysql，任何的資料庫，網頁的表格資料，字典dict，二維串列list』<br>
+也就是pandas的DataFrame資料結構，可以與它們之間互相簡易的存取。<br>
+然後再根據DataFrame來進行想要的大數據分析，它提供內建的演算法與資料結構，能夠用一個指令，就可以進行二維資料的『排序，篩選，關鍵字查詢，任意區間範圍查詢，統計學計算，平均值，變異數，標準差，字串檢索，字串取代，欄位樞紐分析、小記、欄位加總，把二維資料任意方式圖形視覺化顯示』<br>
+而建立pandas的DataFrame資料結構，有兩種方式，可以用column的方式來輸入資料，也可以用row的方式來輸入資料。<br>
+所以pandas是大數據分析，非常實用的利器工具，是python資料分析的首選。<br>
+<br>
+（2）Numpy：
+Numpy專門用來處理矩陣，它的運算效率比列表list串列更高效。<br>
+Numpy是Python進行專業的數值計算之重要模組，因為大多數提供科學計算的包都是用numPy的陣列作為構建基礎，因此在進行高等數學計算時，numpy就是大數據分析的最重要工具了，因為高等數學運算，都是以矩陣的方式來進行運算，例如人工智慧，機器學習，深度學習，類神經網路計算等。<br>
+<br>
+（3）sscipy：是基於numpy的科學計算包，包括統計、線性代數等工具。<br>
+<br>
+（4）matplotlib：是最流行的用於繪製資料圖表的 Python 庫<br>
+也可以結合pandas模組來繪圖。<br>
+
+<br  id="exp1_1a">
+        </p></td>
+    </tr>
+    <tr id='exp1-2a'>
+      <td class="table-secondary"><p>2.執行python的四種方法</p></td>
+      <td  class="table-light"colspan="5" bgcolor="#FFFFFF">
+1.要編寫python有三種的方法：<br>
+一、方法1：安裝python單純的python<br>
+缺點：功能陽春，沒有太多的模組，無法馬上寫大數據分析程式。<br>
+安裝網址：<a href="https://www.python.org/downloads/windows/" target="_blank">python官網下載</a><br>
+<br>
+<span class="red">
+二、方法2：安裝Anaconda<br>
+優點：會同時安裝python、1000多種數學繪圖模組、Spyder編輯器，能夠支援大數據分析。<br>
+缺點：會安裝了很多你用不到的模組，浪費硬碟空間。<br id='exp1-2b'>
+安裝網址：<a href="https://www.anaconda.com/products/individual" target="_blank">到Anacond官網下載安裝</a><br>
+</span>
+<br>
+三、方法3：<a href="https://www.python.org/shell/" target="_blank">使用python官網線上shell</a><br>
+<a href="https://repl.it/languages/python3" target="_blank">使用repl線上python</a><br>
+<br>
+<span class="red">
+四、方法4：使用google雲端硬碟的雲端軟體：Cola，colaboratory<br>
+優點：Google 的 Colab 是一個讓你用網頁瀏覽器就能寫 Python 程式、並且執行的平台。<br>
+優點：Colab 提供免費的 GPU 讓你高效運算機器學習與深度學習演算法。<br>
+優點：Google Colab 預先幫你安裝好大家最常用的 Python 套件，幫你解決了一半以上的煩惱，讓 Python 新手可以不用在剛起步就學習環境部署的麻煩事。數據分析常用的 Pandas 與 Numpy、資料視覺化好用的 Seaborn 與 Matplotlib、還有機器學習必備的 xgboost 或 Tensorflow，這些都是 Colab 預先安裝好的套件。<br>
+不需要再自行安裝套件：（Terminal）輸入 pip install<br>
+優點：可以從 Google Drive 取得你要用的檔案、然後透過 Python 程式讀取；<br>
+優點：可以與google其它軟體整合，例如：也可以匯入 Google Sheet 的表格資料，然後用你最愛的視覺化套件（例如 Matplotlib）畫出美麗的圖表。<br>
+優點：Colab 其中一個厲害的地方就是，你除了可以執行 Python、也能執行 Command Line，只要在 Command Line 指令加上驚嘆號就能做到，像是 !mkdir。你可以在 Colab 裡 Python 程式碼寫到一半的時候，突然加進幾行 Command Line 來操作檔案，完成後，再讓 Python 程式碼接著寫下去，Python 與 Command Line 可以無痛切換。<br>
+優點：%%timeit：算出你的程式碼區塊花多少時間執行，分析你的演算法效率時很好用。<br>
+優點：%run my_script.py：執行你的另一個 Python 程式，如果你的程式還需要呼叫另一個程式，就需要使用。<br>
+</span>
+<br id='exp1-2b'>
+<br>
+</td>
+    </tr>
+    <tr >
+      <td class="table-light"><p>3.Anaconda下載點</p></td>
+      <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+        <p><a href="https://www.anaconda.com/products/individual" target="_blank">Anacond官網</a></p><br id='exp1-2c'></td>
+    </tr>
+
+    <tr>
+      <td class="table-secondary">3.安裝anaconda</td>
+      <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+3.安裝anaconda<br>
+功能：原始的python功能太陽春，若下載anaconda，則可以提供300多種的科學數學模組，可以提供大數據資料分析<br>
+（1）Anaconda是一個免費的Python和R語言的發行版本，用於計算科學（資料科學、機器學習、巨量資料處理和預測分析）<br>
+（2）因為Anaconda有很多的數據分析模組，所以大數據分析會使用到的『pandas、Numpy、Scipy』python package套件，在anaconda安裝完成時就已經包含在裡面了。<br>
+（3）Anaconda中文是森蚺（大蟒蛇）。<br>
+1)可以把Anaconda當作是Python的懶人包，除了Python本身(python2, 3) 還包含了Python常用的資料分析、機器學習、視覺化的套件<br>
+2).完全開源和免費<br>
+3).額外的加速、優化是收費的，但對於學術用途可以申請免費的 License<br>
+4).全平台支持：Linux、Windows、Mac<br>
+5).支持 Python 2.6、2.7、3.3、3.4，可自由切換,<br>
+6).內帶spyder 編譯器（還不錯的spyder編譯器）<br>
+7).自帶jupyter notebook 環境 （就是網頁版的python編輯器，副檔名為IPthon）<br>
+<br>
+（4）常用套件：<br>
+<img src="https://miro.medium.com/max/1400/1*bBiVxG81x6DZYPf8R8CuZw.png" width="90%"/><br>
+Numpy: Python做多維陣列（矩陣）運算時的必備套件，比起Python內建的list，Numpy的array有極快的運算速度優勢<br>
+Pandas：有了Pandas可以讓Python很容易做到幾乎所有Excel的功能了，像是樞紐分析表、小記、欄位加總、篩選<br>
+Matplotlib：基本的視覺化工具，可以畫長條圖、折線圖等等…<br>
+Seaborn：另一個知名的視覺化工具，畫起來比matplotlib好看<br>
+SciKit-Learn: Python 關於機器學習的model基本上都在這個套件，像是SVM, Random Forest…<br>
+Notebook(Jupyter notebook): 一個輕量級web-base 寫Python的工具，在資料分析這個領域很熱門，雖然功能沒有比Pycharm, Spyder這些專業的IDE強大，但只要code小於500行，用Jupyter寫非常方便，Jupyter也開始慢慢支援一些Multi cursor的功能了，可以讓你一次改許多的變數名稱<br>
+（5）優點：省時：一鍵安裝完90%會用到的Python套件，剩下的再用pip install個別去安裝即可<br>
+（6）缺點：占空間：包含了一堆用不到的Python的套件(可安裝另一種miniconda)<br>
+<br>
+（7）下載網址：<a href="https://www.anaconda.com/" target="_blank">https://www.anaconda.com/</a><br>
+選擇個人版：indivisual<br>
+<a href="https://www.anaconda.com/products/individual" target="_blank">https://www.anaconda.com/products/individual</a><br>
+→Download<br>
+→Windows <br>
+Python 3.7（會自動幫你安裝Python 3.7）<br>
+64-Bit Graphical Installer (466 MB)<br>
+32-Bit Graphical Installer (423 MB)<br>
+<br>
+（8）安裝過程，要勾選<br>
+不勾選：add the anaconda to the system PATH（但是2020年，ananconda不建議勾選這個，容易發生錯誤）<br>
+勾選：Register anaconda as system Python 3.7<br>
+<br>
+（9）安裝結束<br>
+→在windows開始→anaconda有6個項目，最常用的有3個<br>
+（1）anaconda prompt：可以直接下cmd指令<br>
+（2）Spyter：編譯器（還不錯的spyder編譯器）<br>
+（3）jupyter notebook（網頁版的python編輯器，副檔名為IPthon）<br id='exp1-2d'>
+</td>
+    </tr>
+
+    <tr >
+        <td class="table-light">4.Anaconda prompt：cmd指令</td>
+        <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+4.使用anaconda prompt：直接下cmd指令<br>
+注意：windows 10 必須使用管理員來執行（點選anaconda prompt→滑鼠右鍵→以系統管理員身份進行）<br>
+（1）列出目前已經安裝的anaconda的模組與版本：<br>
+conda list<br>
+<br>
+（2）對某個模組更新安裝<br>
+conda update 模組<br>
+範例：conda update ipython<br>
+<br>
+（3）安裝某個模組<br>
+方法1：conda install 模組<br>
+範例：conda install numpy<br>
+<br>
+# 安裝 NumPy 1.15 以後、 1.16 以前<br>
+conda install 'numpy>=1.15,<1.16'<br>
+<br>
+方法2：pip install 模組<br>
+範例：pip install numpy<br>
+<br>
+（4）解除安裝某個模組<br>
+方法1：conda uninstall 模組<br>
+範例：conda uninstall numpy<br>
+<br>
+方法2：輸入 conda remove PACKAGE_NAME可以從目前的工作環境移除指定套件。<br>
+# 移除 NumPy<br>
+conda remove numpy numpy-base<br>
+<br>
+方法3：pip uninstall 模組<br>
+範例：pip uninstall numpy<br>
+<br>
+（5）在anaconda prompt執行python程式<br>
+方法1：<br>
+先到工作目錄：cd ch1<br>
+執行.py程式：python test1.py<br>
+<br>
+方法2：python c:\chp1\test1.py<br>
+<br>
+（6）常用指令<br>
+conda --version 檢視 conda 版本<br>
+conda update PACKAGE_NAME更新指定套件<br>
+conda --help 檢視 conda 指令說明文件<br>
+conda list --ENVIRONMENT 檢視指定工作環境安裝的套件清單<br>
+conda install PACAKGE_NAME=MAJOR.MINOR.PATCH 在目前的工作環境安裝指定套件<br>
+conda remove PACKAGE_NAME 在目前的工作環境移除指定套件<br>
+conda create --name ENVIRONMENT python=MAIN.MINOR.PATCH 建立新的工作環境且安裝指定 Python 版本<br>
+conda activate ENVIRONMENT 切換至指定工作環境<br>
+conda deactivate 回到 base 工作環境<br>
+conda env export --name ENVIRONMENT --file ENVIRONMENT.yml 將指定工作環境之設定匯出為 .yml 檔藉此複製且重現工作環境<br>
+conda remove --name ENVIRONMENT --all 移除指定工作環境<br>
+使用 conda list | grep numpy 檢查 Python 套件清單中是否還有 NumPy 套件<br>
+輸入 conda search PACKAGE_NAME可以檢視指定套件在 conda 中可安裝的版本列表。<br>
+# 檢視 NumPy 在 conda 中可安裝的版本<br>
+conda search numpy=1.16.3<br id='exp1-2e'>
+        </td>
+    </tr>
+    <tr>
+        <td class="table-secondary">5.用Anaconda prompt來建立虛擬環境</td>
+        <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+5.使用Anaconda prompt來建立虛擬環境<br>
+功能：可以建立多個Anaconda虛擬環境<br>
+例如：目前安裝後預設是python 3.x版本的環境，若要創建一個python 2.x的環境，就可以在Anaconda虛擬環境實現<br>
+（1）# 檢視電腦中可使用與目前所在的工作環境<br>
+conda env list<br>
+<br>
+（2）使用 conda create --name ENVIRONMENT python=MAIN.MINOR.PATCH 指令可以建立出乾淨、極簡且資源隔絕的工作環境。<br>
+指令：conda create -n 虛擬環境名稱 python=版本 anaconda<br>
+<br>
+# 建立一個名稱為 demo 的 Python 2 工作環境<br>
+conda create --name demo python=2<br>
+範例：建立py27env環境<br>
+conda create -n py27env python=2.7 anaconda<br>
+<br>
+（3）輸入 conda activate ENVIRONMENT 可以啟動指定工作環境、<br>
+方法1：conda activate ENVIRONMENT<br>
+方法2：activate ENVIRONMENT<br>
+範例：activate py27env<br>
+<br>
+方法3：到windows→開始→點選Anaconda prompt（py27env）<br>
+<br>
+（4）關閉虛擬目錄，回到原本pytohn環境(base)<br>
+使用 conda deactivate 則是切換回預設的 base 工作環境。<br>
+方法1：conda deactivate<br>
+方法2：deactivate<br>
+<br>
+（5）# 檢視 demo 工作環境中的套件<br>
+conda list -n py27env<br>
+<br>
+（5）範例
+A.建立py27env虛擬環境<br>
+conda create -n py27env python=2.7 anaconda<br>
+B.切換到py27env虛擬環境<br>
+activate py27env<br>
+C.檢視 demo 工作環境中的套件<br>
+conda list -n py27env<br>
+D.# 檢視 Python 版本<br>
+python --version<br>
+E.關閉虛擬目錄，回到原本pytohn環境(base)<br>
+deactivate<br>
+<br>
+（5）複製一個與目前pyhon環境（或是py27env） 完全相同的工作環境<br>
+conda create -n 新虛擬環境名稱 --clone root<br>
+範例：conda create -n py27env2 --clone root<br>
+<br>
+# 檢查明確所有虛擬環境名稱<br>
+conda info -e<br>
+<br>
+（6）移除某個虛擬環境<br>
+conda remove -n 虛擬環境名稱 --all<br>
+範例：conda remove -n py27env --all<br>
+<br>
+（7）常用指令整理<br>
+安裝：conda install<br>
+更新：conda update<br>
+移除：conda remove <br>
+<br>
+在工作環境管理透過 <br>
+創建：conda create<br>
+啟動：conda activate<br>
+停止：conda deactivate<br>
+匯出設定檔：conda env export<br>
+移除：conda remove<br id='exp1-2f'>
+        </td>
+    </tr>
+    <tr>
+        <td class="table-secondary">6.使用Spyter編譯器</td>
+        <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+6.使用Spyter：編譯器<br>
+（1）新增一個py檔案<br>
+File→ New file<br>
+<br>
+print("你好，歡迎光臨")<br>
+print(1+1)<br>
+<br>
+Run➤<br>
+<br>
+（2）開啟已經存在的檔案<br>
+方法1：File→ Open<br>
+方法2：拖曵檔案總管的py檔案到Spyder<br>
+<br>
+（3）在Spyter使用簡易智慧輸入<br>
+方法：按『tab』<br>
+範例：<br>
+先輸入p<br>
+然後按『tab』<br>
+出現list清單，都是p開始的指令<br>
+<br>
+（4）程式除錯<br>
+方法1：若是這一行有指令寫錯，就會在最左邊出現三角形▲警告icon<br>
+方法2：在這個一行最左邊double click，就會出現中斷點（或是這一行按F12）<br id='exp1-2g'>
+        </td>
+    </tr>
+    <tr>
+        <td class="table-secondary">7.jupyter notebook網頁版的python編輯器</td>
+        <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+7.jupyter notebook<br>
+（1）功能：是網頁版的python編輯器，副檔名為IPthon<br>
+會開啟瀏覽器：http://localhost:8888/tree<br>
+對應的硬碟目錄 =  C:\Users\電腦名稱<br>
+（例如： C:\Users\user）<br>
+<br>
+（2）練習線上編輯一個簡單python程式<br>
+A.右方→New→Python3<br>
+在cell裡面輸入In[1]<br>
+a = ("apple","grape","banana")<br>
+print(a[2])<br>
+<br>
+B.Run<br>
+<br>
+C.修改檔案名稱→Untitled→exp1-3<br>
+<br>
+D.查詢雲端檔案放置位置：C:\Users\電腦名稱\exp1-3.ipynb<br>
+<br>
+（3）二種不同的Run方式<br>
+A.Run：會新增一個new cell<br>
+B.Ctrl+Enter：會停留在原本的cell<br>
+<br>
+（4）在jupyter notebook使用簡易智慧輸入<br>
+方法：按『tab』<br>
+範例：<br>
+先輸入p<br>
+然後按『tab』<br>
+出現list清單，都是p開始的指令<br>
+<br>
+（5）在jupyter notebook編輯的檔案無法讓python IDE編譯<br>
+jupyter notebook編輯的檔案是.ipynb<br>
+與python的.py不同<br>
+改善方法：只能把程式碼複製貼上，在兩個平台交流<br id='exp1-2h'>
+        </td>
+    </tr>
+    <tr >
+        <td class="table-secondary">8.其它線上雲端可編譯的python平台</td>
+        <td class="table-light" colspan="5" bgcolor="#FFFFFF">
+8.其它線上雲端可編譯的python平台<br>
+網站：http://rep.it/languages/python3<br>
+        </td>
+    </tr>
+
+    
+    <tr bgcolor="#f0f0f0">
+      <td colspan="6">&nbsp;</td>
+    </tr>
+</table>
+
+<p  id=""></p>
+<p></p>
+<table class="table table-bordered table-condensed"  bordercolor="#dddddd" width="100%">     
+<tr bgcolor="#f0f0f0">
+            <td colspan="6">&nbsp;</td>
+</tr>
+
+
+
+<tr bgcolor="#f0f0f0"  id="exp4_1">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    <span class='red'> 
+    1.VisLab，VisCam簡介<br>
+    VisLab：AI圖像檢測軟體<br>
+    VisCam：AI影像辨識光學模組<br>
+  </span>
+    ☎<a href='example/chp16/ppt/VisLab第一堂簡報.pdf' target="_blank" >VisLab，VisCam簡介簡報</a><br>
+    <br>
+    <span class='red'> 
+    2.VisLab簡介<br>                
+    （1）VisLab：免費，下載使用<br>
+    <br>                
+    <span class='red'> 
+      ☎VisLab軟體下載：<br>
+    </span>
+    <a href='http://www.3dfamily.com/web/download/download.jsp' target="_blank" >官網：下載VisLab</a><br>
+    安裝時，會詢問序號，不理它，再開一次，即可<br>  
+    <br>
+    <span class='red'> 
+      ☎VisLab使用手冊：<br>
+      </span>
+      <a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+      <br>
+  </span>
+    VisLab係由智泰科技耗時數年自主開發的AI模型訓練套裝軟體，可應用於各行各業上。<br>
+    透過簡易且可視化的操作介面，讓未曾學習過程式語言與不孰悉AI資料庫的各界人士，都能藉由VisLab立即應用AI技術所帶來的便利性<br>
+    <br>
+    <span class='red'> 
+    （2）VisLab有影像辨識三大功能：<br>
+  </span>
+    ☎影像分類：辨識這張圖片上貓，狗，是撲克牌9，10，11，12，13，1<br>
+    ☎影像偵測：偵測這張圖片的兩個物件，框框1是貓，框框2是夠<br>
+    ☎影像分割：把這張圖片的貓的區域，分割出來（有範圍，面積），可應用於醫學影像辨識（辨識病灶區域）<br>
+    ☎<a href='example/chp16/16-1.PNG' target="_blank" >成果圖片</a><br>
+    <br>
+    <span class='red'> 
+    （3）三種工具：<br>
+  </span>
+    上述分類偵測分割三大功能，其中的每個功能皆有『標記、訓練、驗證』三個工具<br>
+    ☎<a href='example/chp16/16-2.PNG' target="_blank" >成果圖片</a><br>
+    ☎<a href='example/chp16/16-3.PNG' target="_blank" >成果圖片</a><br>
+    ☎<a href='example/chp16/16-4.PNG' target="_blank" >成果圖片</a><br>
+    <br>
+    <span class='red'> 
+    （4）圖形化操作界面，不需要寫程式碼<br>
+  </span>
+    在VisLab中有分類、偵測與分割功能，每種功能都具備標記、訓練與驗證工具，使用者透過圖片針對其目的輕鬆進行標記，標記後可依照需求調整參數進行訓練，<br>
+    目前已有36種網路模型可供使用，訓練過程均可透過可視化介面控制，使用者亦可依照個人時間選擇中斷或接續訓練，最後訓練完成的AI模型，透過可視化的驗證工具輕鬆檢視其訓練成果，決定是否串接設備與重新標記或訓練的依據<br>
+    <br>
+    <span class='red'> 
+    （5）AI實力分析：<br>
+    ☎VisLab可以處理大多數的工業影像辨識專案。<br>
+    ☎VisLab可以處理大多數的學界影像辨識研究。<br>
+    ☎智泰科技所負責的業界AI專案，與自行下載的VisLab功能幾乎類似。<br>
+    ☎VisLab幾乎可以處理大多數的AI影像辨識問題。<br>
+    （可以處理：車牌辨識，物種辨識，醫學影像辨識）<br>
+    （無法處理：人臉辨識）<br>
+  </span>
+  <br>
+    <span class='red'> 
+    （5）各種實際應用：<br>
+  </span>
+    ☎<a href='example/chp16/16-5.PNG' target="_blank" >智慧醫療（影像分割）</a><br>
+    ☎<a href='example/chp16/16-6.PNG' target="_blank" >智慧醫療（影像分類）</a><br>
+    ☎<a href='example/chp16/16-7.PNG' target="_blank" >智慧醫療（物件偵測）</a><br>
+    ☎<a href='example/chp16/16-8.PNG' target="_blank" >鐵道安全檢查（物件偵測）</a><br>
+    ☎<a href='example/chp16/16-9.PNG' target="_blank" >自動駕駛（影像分類）</a><br>
+    ☎<a href='example/chp16/16-10.PNG' target="_blank" >智慧零售（物件偵測）</a><br>
+    <br>
+    <span class='red'> 
+    （6）最低硬體配備需求：<br>
+  </span>
+    ☎<a href='example/chp16/16-11.PNG' target="_blank" >智慧醫療（影像分割）</a><br>
+    <br>
+    <span class='red'> 
+     2.VisCam簡介<br>
+    </span>
+    （1）功能：<br>
+    ☎配備相機鏡頭，可以即時辨識<br>
+    ☎可以事先部署VisLab 的AI參數模型<br>
+    ☎<a href='example/chp16/16-12.PNG' target="_blank" >VisCam功能</a><br>
+    ☎<a href='example/chp16/16-13.PNG' target="_blank" >VisCam配備示意圖</a><br>
+    為深度學習圖像辨識打造的檢測模組，可將VisLab輸出之檢測模型搭載到VisCam系統中，配合專屬的AI相機、光源進行產線即時智慧檢測。此外，VisCam也可同時作為資料蒐集器，截取、管理檢測圖像與資料庫，進而支援深度學習模型在VisLab中接續學習。<br>
+
+    <br>
+    
+    
+      <br >
+    </p></td>
+</tr>
+  
+
+<tr bgcolor="#f0f0f0" id="exp4_2">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF" ><p>
+    <span class='red'>
+    2.VisLab，VisCam教學影片<br>
+    ☎<a href='http://www.3dfamily.com/web/product/product_in.jsp?pd_no=PD1611906028527&lang=tw' target="_blank" >官網：教學用品</a><br>
+    共9部教學影片。使用者可依據需求功能選擇觀看的段落，並搭配試用版軟體進行練習。<br> 
+    <br>                
+<span class='red'> 
+（1）VisLab軟體下載：<br>
+</span>
+<a href='http://www.3dfamily.com/web/download/download.jsp' target="_blank" >官網：下載VisLab</a><br>
+安裝時，會詢問序號，不理它，再開一次，即可<br>  
+<br>
+<span class='red'> 
+（1）VisLab使用手冊：<br>
+</span>
+<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>  
+<br>                
+<span class='red'> 
+（1）Classification 分類器<br>
+</span>
+VisLab 教學影片1 - CFL 分類器 標記工具教學Classification Lable Tool<br>
+<a href='https://youtu.be/GagOgZLWTuo' target="_blank" >官網：VisLab 教學影片1</a><br>
+VisLab 教學影片2 - CFT 分類器 訓練工具教學Classification Trainer<br>
+<a href='https://youtu.be/IP8cUNcRQF4' target="_blank" >官網：VisLab 教學影片2</a><br>
+VisLab 教學影片3 - CFV 分類器 驗證工具教學Classification Verify<br>
+<a href='https://youtu.be/oMS2qLhS0XI' target="_blank" >官網：VisLab 教學影片3</a><br>
+
+<br>                
+<span class='red'>
+（2）Object Detection 物件偵測<br>
+</span>
+VisLab 教學影片4 - ODL 物件偵測 標記工具教學Object Detection Lable Tool<br>
+<a href='https://youtu.be/57h7S4FdoCs' target="_blank" >官網：VisLab 教學影片4</a><br>
+VisLab 教學影片5 - ODT 物件偵測 訓練工具教學Object Detection Trainer<br>
+<a href='https://youtu.be/0fTrPSMA078' target="_blank" >官網：VisLab 教學影片5</a><br>
+VisLab 教學影片6 - ODV 物件偵測 驗證工具教學Object Detection Verify<br>
+<a href='https://youtu.be/Hll1zMAWG_U' target="_blank" >官網：VisLab 教學影片6</a><br>
+<br>
+<span class='red'>
+（3）Segmentation 分割<br>
+</span>
+VisLab 教學影片7 - SEL 分割 標記工具教學Segmentation Lable Tool<br>
+<a href='https://youtu.be/Yxtu_jJCmkA' target="_blank" >官網：VisLab 教學影片7</a><br>
+VisLab 教學影片7 - SEL 分割 標記工具教學Segmentation Lable Tool<br>
+VisLab 教學影片8 - SET 分割 訓練工具教學Segmentation Trainer<br>
+<a href='https://youtu.be/SMwie_kLtO4' target="_blank" >官網：VisLab 教學影片8</a><br>
+VisLab 教學影片7 - SEL 分割 標記工具教學Segmentation Lable Tool<br>
+VisLab 教學影片9 - SEV 分割 驗證工具教學Segmentation Verify<br>
+<a href='https://youtu.be/sF4RMdJELLw' target="_blank" >官網：VisLab 教學影片9</a><br>
+
+      <br>
+    </p></td>
+</tr>  
+
+<tr bgcolor="#f0f0f0"  id="exp4_4">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    3.範例1：Classification分類器：標記工具<br>                
+    ☎目的：把收集來的圖片素材，加上標記label（例如，貓，狗）<br>
+    ☎方法：使用分類器/標記工具<br>
+    <br>
+    <span class='red'> 
+      （1）Classification 分類器教學影片<br>
+    </span>
+VisLab 教學影片1 - CFL 分類器 標記工具教學Classification Lable Tool<br>
+☎<a href='https://youtu.be/GagOgZLWTuo' target="_blank" >官網：VisLab 教學影片1</a><br>
+☎<a href='example/chp16/ppt/VisLab分類器(操作篇).pdf' target="_blank" >VisLab分類器(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>  
+      <br>
+
+<span class='red'> 
+（2）下載圖片素材檔案：<br>
+</span>
+☎<a href='example/chp16/練習範例/catDog分類.rar' target="_blank" >下載圖片素材檔案</a><br>
+☎圖片要分成三個目錄：train，test，output（名稱自訂，可以其它名稱）<br>
+<a href='example/chp16/example/exp1/1-1.PNG' target="_blank" >示意圖</a><br>
+<br>
+
+<span class='red'> 
+（3）圖片分類的操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）標記：振作步驟：<br>
+</span>
+步驟一：先建立 train 、testtest 與output output 資料夾。<br>
+<a href='example/chp16/example/exp1/1-1.PNG' target="_blank" >示意圖</a><br>
+步驟二：將照片分別放置 train 與testtest 資料夾中。<br>
+步驟三：開啟 VisLab VisLab VisLab，選取分類器<br>
+<a href='example/chp16/example/exp1/1-3.PNG' target="_blank" >示意圖</a><br>
+步驟四：點選工具列下方第一個 「開新設定檔」，選取欲標記的資料夾 (train/test) (train/test)。<br>
+<a href='example/chp16/example/exp1/1-4.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp1/1-5.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp1/1-6.PNG' target="_blank" >示意圖</a><br>
+步驟五：分類標籤新增名稱 (Cats 與Dogs) 並進行標記。<br>
+<a href='example/chp16/example/exp1/1-7.PNG' target="_blank" >示意圖</a><br>
+進行標記<br>
+<a href='example/chp16/example/exp1/1-8.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp1/1-9.PNG' target="_blank" >示意圖</a><br>
+步驟六：標記完成，回首頁。<br>
+<br>
+<span class='red'> 
+☎注意：先做train的標記<br>
+➜做完後，一定要先按Home首頁<br>
+➜才能自動產生一個標記xml檔案（LabelMap.pbtxt），才算完成<br>
+➜才能開始做下一個test目錄的標記<br>
+</span>
+<br>
+<span class='red'> 
+（5）標記：要記得完成三個目錄的標記（train, test, output）：<br>
+</span>
+
+<br>
+    </p></td>
+</tr>    
+<tr bgcolor="#f0f0f0" id="exp4_5">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+   4.範例2：Classification分類器：訓練工具<br>
+   ☎目的：把加上標記label（例如，貓，狗）圖片，進行訓練<br>
+   ☎方法：使用分類器/訓練工具<br>
+   <br>
+   <span class='red'> 
+     （1）Classification 分類器教學影片<br>
+   </span>
+VisLab 教學影片2 - CFT 分類器 訓練工具教學Classification Trainer<br>
+☎<a href='https://www.youtube.com/watch?v=IP8cUNcRQF4' target="_blank" >官網：VisLab 教學影片2</a><br>
+☎<a href='example/chp16/ppt/VisLab分類器(操作篇).pdf' target="_blank" >VisLab分類器(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+    <br>
+
+<span class='red'> 
+（3）圖片分類的操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）訓練：振作步驟：<br>
+</span>
+步驟一：進入分類器的訓練工具後，從資料中依序將train、test與output資料夾。 資料夾。<br>
+<a href='example/chp16/example/exp1/1-3.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp2/2-1.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp2/2-2.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp2/2-3.PNG' target="_blank" >示意圖</a><br>
+步驟二：點選開始訓練，開始製作AI 模型檔。<br>
+<a href='example/chp16/example/exp2/2-4.PNG' target="_blank" >示意圖</a><br>
+步驟三：訓練完成取得AI模型檔，回首頁。<br>
+<a href='example/chp16/example/exp2/2-5.PNG' target="_blank" >示意圖</a><br>
+<span class='red'> 
+☎注意：先做train的標記<br>
+➜做完後，一定要先按Home首頁<br>
+➜才能自動產生一個標記xml檔案（LabelMap.pbtxt），才算完成<br>
+➜才能開始做下一個test目錄的標記<br>
+</span>
+<br>
+ 
+      <br>
+    </p></td>
+</tr>  
+
+
+<tr bgcolor="#f0f0f0" id="exp4_6">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    5.範例3：Classification分類器：驗證工具<br>
+    ☎目的：把已經訓練好的模型，拿來驗證圖片<br>
+    ☎方法：使用分類器/驗證工具<br>
+    <br>
+    <span class='red'> 
+      （1）Classification 分類器教學影片<br>
+    </span>
+    VisLab 教學影片3 - CFV 分類器 驗證工具教學Classification Verify<br>
+☎<a href='https://www.youtube.com/watch?v=oMS2qLhS0XI&feature=emb_imp_woyt' target="_blank" >官網：VisLab 教學影片3</a><br>
+☎<a href='example/chp16/ppt/VisLab分類器(操作篇).pdf' target="_blank" >VisLab分類器(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（3）圖片分類的操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）驗證：振作步驟：<br>
+</span>
+步驟一：進入分類器的驗證工具後，從資料中依序導入test資料夾與AI模型檔(放置於output資料夾中)。<br>
+<a href='example/chp16/example/exp1/1-3.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp3/3-1.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp3/3-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+步驟二：點選開始分析。<br>
+<a href='example/chp16/example/exp3/3-3.PNG' target="_blank" >示意圖</a><br>
+步驟三：分析完成，看成績。<br>
+<a href='example/chp16/example/exp3/3-4.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp3/3-5.PNG' target="_blank" >示意圖</a><br>
+
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>  
+<tr bgcolor="#f0f0f0" id="exp4_7">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    6.範例4：Object Detection 物件偵測：標記工具<br>
+    ☎目的：把收集來的圖片素材，加上標記label（例如，撲克牌9，10，11，12，1）<br>
+    ☎方法：使用物件偵測/標記工具<br>
+    <br>
+    <span class='red'> 
+      （1）Object Detection 物件偵測教學影片<br>
+    </span>
+    
+VisLab 教學影片4 - ODL 物件偵測 標記工具教學Object Detection Lable Tool<br>
+☎<a href='https://www.youtube.com/watch?v=57h7S4FdoCs' target="_blank" >官網：VisLab 教學影片4</a><br>
+☎<a href='example/chp16/ppt/VisLab物件偵測(操作篇).pdf' target="_blank" >VisLab物件偵測(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）下載圖片素材檔案：<br>
+</span>
+☎<a href='example/chp16/練習範例/poker物件偵測.rar' target="_blank" >下載圖片素材檔案</a><br>
+☎圖片要分成三個目錄：train，test，output（名稱自訂，可以其它名稱）<br>
+<a href='example/chp16/example/exp1/1-1.PNG' target="_blank" >示意圖</a><br>
+<br>
+
+<span class='red'> 
+（3）圖片物件偵測操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）標記：振作步驟：<br>
+</span>
+步驟一：先建立 train、test 與output資料夾。<br>
+<a href='example/chp16/example/exp1/1-3.PNG' target="_blank" >示意圖</a><br>
+步驟二：將照片分別放置 train 與test 資料夾中。<br>
+步驟三：開啟 VisLab，選取物件偵測工具<br>
+<a href='example/chp16/example/exp4/4-3.PNG' target="_blank" >示意圖</a><br>
+步驟四：點選工具列下方第一個「開新設定檔」，取欲標記的資料夾 (train/test) (train/test) 。<br>
+<a href='example/chp16/example/exp4/4-4.PNG' target="_blank" >示意圖</a><br>
+步驟五：分類標籤新增名稱 (nine (nine至ace) 並進行標記。<br>
+<a href='example/chp16/example/exp4/4-5.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp4/4-6.PNG' target="_blank" >示意圖</a><br>
+步驟六：標記完成，回首頁。<br>
+步驟七：再標記test目錄，再回首頁。<br>
+<br>
+<span class='red'> 
+☎注意：先做train的標記<br>
+➜做完後，一定要先按Home首頁<br>
+➜才能自動產生一個標記xml檔案（LabelMap.pbtxt），才算完成<br>
+➜才能開始做下一個test目錄的標記<br>
+</span>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>  
+<tr bgcolor="#f0f0f0" id="exp4_8">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    7.範例5：Object Detection 物件偵測：訓練工具<br>
+    ☎目的：把標記label（例如，撲克牌9，10，11，12，1）進行訓練<br>
+    ☎方法：使用物件偵測/訓練工具<br>
+    <br>
+    <span class='red'> 
+      （1）Object Detection 物件偵測教學影片<br>
+    </span>
+    
+    VisLab 教學影片5 - ODT 物件偵測 訓練工具教學Object Detection Trainer<br>
+☎<a href='https://youtu.be/0fTrPSMA078' target="_blank" >官網：VisLab 教學影片4</a><br>
+☎<a href='example/chp16/ppt/VisLab物件偵測(操作篇).pdf' target="_blank" >VisLab物件偵測(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）圖片物件偵測操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（3）訓練：振作步驟：<br>
+</span>
+步驟一：進入物件偵測的訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 traintrain train、testtest 與output output output資料夾。<br>
+步驟二：點選開始訓練，製作AI模型檔。<br>
+<a href='example/chp16/example/exp5/5-2.PNG' target="_blank" >示意圖</a><br>
+
+步驟三：訓練完成取得AI模型檔，回首頁。<br>
+<br>
+
+<span class='red'> 
+（3）訓練參數說明：<br>
+</span>
+☎招回率 (Recall) ：又稱查全率，在資訊檢索系統中，找出相關料的筆數與文件庫中應有相關資料總比值。<br>
+☎精確率 (Precision)：又稱查準率，在資訊檢索系統中，找出相關料的筆數與系統找出資料總比值。<br>
+☎F度量 (F-measure)：是一種同時兼顧查準率（precision）與查全率（recall）<br>
+的度量方式，其公式為 2XPXR/(P+R 2XPXR/(P+R )<br>
+<br>
+☎舉例： 狗共有 50 張圖片，而在系統回傳的 100 張圖片，只有 20 張是狗的圖片。<br>
+招回率： 20/50=0.4<br>
+精確率： 20/100=0.2<br>
+F度量： 2X0.4X0.2/(0.4+02)=0.27<br>
+<a href='example/chp16/example/exp5/5-1.PNG' target="_blank" >示意圖</a><br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>  
+<tr bgcolor="#f0f0f0" id="exp4_9">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    8.範例6：Object Detection 物件偵測：驗證工具<br>
+    ☎目的：驗證test標記label（撲克牌9，10，11，12，1）進行驗證<br>
+    ☎方法：使用物件偵測/驗證工具<br>
+    <br>
+    <span class='red'> 
+      （1）Object Detection 物件偵測教學影片<br>
+    </span>
+    
+    VisLab 教學影片6 - ODV 物件偵測 驗證工具教學Object Detection Verify<br>
+☎<a href='https://youtu.be/Hll1zMAWG_U' target="_blank" >官網：VisLab 教學影片6</a><br>
+☎<a href='example/chp16/ppt/VisLab物件偵測(操作篇).pdf' target="_blank" >VisLab物件偵測(操作篇)簡報</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）圖片物件偵測操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（3）驗證：振作步驟：<br>
+</span>
+步驟一：進入物件偵測 的驗證工具後，從資料中依序導入 test 資料夾與與 AI 模型檔(放置於output資料夾中 )。<br>
+<a href='example/chp16/example/exp5/5-3.PNG' target="_blank" >示意圖</a><br>
+步驟二：點選開始分析。<br>
+步驟三：分析完成，看成績。<br> 
+<a href='example/chp16/example/exp5/5-4.PNG' target="_blank" >示意圖</a><br>
+<br>
+
+<span class='red'> 
+（3）驗證參數說明：<br>
+</span>
+<a href='example/chp16/example/exp5/5-5.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp5/5-6.PNG' target="_blank" >示意圖</a><br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>
+<tr bgcolor="#f0f0f0" id="exp4_10">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    9.範例7：Segmentation 分割：標記工具<br>
+    ☎目的：把收集來的圖片素材，加上標記label（例如，矩形，三角形，圓形）<br>
+    ☎方法：使用分割/標記工具<br>
+    <br>
+    <span class='red'> 
+      （1）Segmentation 分割教學影片<br>
+    </span>
+    
+    VisLab 教學影片7 - SEL 分割 標記工具教學Segmentation Lable Tool<br>
+☎<a href='https://youtu.be/Yxtu_jJCmkA' target="_blank" >官網：VisLab 教學影片7</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）下載圖片素材檔案：<br>
+</span>
+☎<a href='example/chp16/練習範例/形狀分割.rar' target="_blank" >下載圖片素材檔案</a><br>
+☎圖片要分成三個目錄：train，test，output（名稱自訂，可以其它名稱）<br>
+<a href='example/chp16/example/exp1/1-1.PNG' target="_blank" >示意圖</a><br>
+<br>
+
+<span class='red'> 
+（3）Segmentation 分割操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）標記：振作步驟：<br>
+</span>
+步驟一：先建立 train、test 與output資料夾。<br>
+步驟二：將照片分別放置 train 與test 資料夾中。<br>
+步驟三：開啟 VisLab，選取Segmentation 分割工具<br>
+<a href='example/chp16/example/exp6/6-1.PNG' target="_blank" >示意圖</a><br>
+步驟四：點選工具列下方第一個「開新設定檔」，取欲標記的資料夾 (train/test) (train/test) 。<br>
+<a href='example/chp16/example/exp6/6-2.PNG' target="_blank" >示意圖</a><br>
+步驟五：分類標籤新增名稱 (矩形，三角形，圓形)。<br>
+步驟六：使用上方的『矩形工具，圓形工具，三角形工具』圈選範圍，並進行標記<br>
+步驟七：標記完成，回首頁。<br>
+步驟八：再標記test目錄，再回首頁。<br>
+<br>
+<span class='red'> 
+☎注意：先做train的標記<br>
+➜做完後，一定要先按Home首頁<br>
+➜才能自動產生一個標記xml檔案（LabelMap.pbtxt），才算完成<br>
+➜才能開始做下一個test目錄的標記<br>
+</span>
+<br>
+    
+      <br >
+    </p></td>
+</tr>
+<tr bgcolor="#f0f0f0" id="exp4_11">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    10.範例8：Segmentation 分割：訓練工具<br>
+    ☎目的：把收集來的圖片素材，加上標記label（例如，矩形，三角形，圓形）<br>
+    ☎方法：使用分割/標記工具<br>
+    <br>
+    <span class='red'> 
+      （1）Segmentation 分割教學影片<br>
+    </span> 
+
+VisLab 教學影片8 - SET 分割 訓練工具教學Segmentation Trainer<br>
+☎<a href='https://youtu.be/SMwie_kLtO4' target="_blank" >官網：VisLab 教學影片8</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）Segmentation 分割操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）分割：訓練步驟：<br>
+</span>
+步驟一：進入物件偵測的訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 訓練工具後，從資料中依序將 traintrain train、testtest 與output output output資料夾。<br>
+步驟二：點選開始訓練，製作AI模型檔。<br>
+<a href='example/chp16/example/exp7/7-1.PNG' target="_blank" >示意圖</a><br>
+步驟三：訓練完成取得AI模型檔，回首頁。<br>
+<br>
+<br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>
+<tr bgcolor="#f0f0f0" id="exp4_12">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    11.範例9：Segmentation 分割：驗證工具<br>
+    ☎目的：驗證test標記label（矩形，圓形，三角形）進行驗證<br>
+    ☎方法：使用分割/驗證工具<br>
+    <br>
+    <span class='red'> 
+      （1）Segmentation 分割教學影片<br>
+    </span> 
+    VisLab 教學影片9 - SEV 分割 驗證工具教學Segmentation Verify<br>
+☎<a href='https://youtu.be/sF4RMdJELLw' target="_blank" >官網：VisLab 教學影片9</a><br>
+☎<a href='example/chp16/ppt/AI VisLab使用說明書.pdf' target="_blank" >官網：VisLab使用說明書</a><br>
+<br>
+
+<span class='red'> 
+（2）Segmentation 分割操作流程：<br>
+</span>
+☎標記<br>
+☎訓練<br>
+☎驗證<br>
+<a href='example/chp16/example/exp1/1-2.PNG' target="_blank" >示意圖</a><br>
+<br>
+<span class='red'> 
+（4）分割：驗證步驟：<br>
+</span>
+步驟一：進入物件偵測 的驗證工具後，從資料中依序導入 test 資料夾與與 AI 模型檔(放置於output資料夾中 )。<br>
+<a href='example/chp16/example/exp8/8-1.PNG' target="_blank" >示意圖</a><br>
+步驟二：點選開始分析。<br>
+步驟三：分析完成，看成績。<br> 
+<a href='example/chp16/example/exp8/8-2.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp8/8-3.PNG' target="_blank" >示意圖</a><br>
+<br>
+
+<span class='red'> 
+（3）驗證參數說明：<br>
+</span>
+<a href='example/chp16/example/exp5/5-5.PNG' target="_blank" >示意圖</a><br>
+<a href='example/chp16/example/exp5/5-6.PNG' target="_blank" >示意圖</a><br>
+
+<br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>
+<tr bgcolor="#f0f0f0" id="exp4_13">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    12.範例10：VisCam<br>
+    <br>
+    <span class='red'> 
+     1.VisCam簡介<br>
+     </span>
+     （1）功能：<br>
+     ☎配備相機鏡頭，可以即時辨識<br>
+     ☎可以事先部署VisLab 的AI參數模型<br>
+     ☎<a href='example/chp16/16-12.PNG' target="_blank" >VisCam功能</a><br>
+     ☎<a href='example/chp16/16-13.PNG' target="_blank" >VisCam配備示意圖</a><br>
+     為深度學習圖像辨識打造的檢測模組，可將VisLab輸出之檢測模型搭載到VisCam系統中，配合專屬的AI相機、光源進行產線即時智慧檢測。此外，VisCam也可同時作為資料蒐集器，截取、管理檢測圖像與資料庫，進而支援深度學習模型在VisLab中接續學習。<br>
+      <br>
+    <span class='red'> 
+      2.下載安裝VisCam<br>
+      </span>
+      （1）
+      ☎<a href='https://drive.google.com/file/d/1e_jZC9havhlTac06zfDEOLPQPvTIgRjV/view?usp=sharing' target="_blank" >下載VisCam軟體</a><br>
+      ☎<a href='http://www.3dfamily.com/web/download/download.jsp' target="_blank" >官網：下載VisCam軟體</a><br>
+      注意：VisCam需要序號（要購買），VisLab是免費版。<br>
+  
+     
+
+      <br>
+    <span class='red'> 
+      2.若沒有webCam，可以用手機安裝iVCam，就可以用手機掃描物件，達成自動辨識<br>
+      </span>
+      （1）iVCam的功能：<br>
+      ☎取代webCam，能夠把手機的鏡頭，同步轉送到電腦播放<br>
+      ☎注意：在校內使用iVCam，因為校內有封鎖，所以手機的上網必須登入校內wifi，才能使用<br>
+      ☎步驟1：電腦安裝iVCam，手機安裝iVCam<br>
+      ☎步驟2：手機的上網必須登入校內wifi<br>
+      ☎步驟3：查詢電腦的IP4位址<br>
+
+<br>
+    <span class='red'> 
+      （2）安裝iVCam：<br>
+    </span>
+      ☎<a href='https://ivcam.en.softonic.com/' target="_blank" >下載安裝iVCam</a><br>
+      ☎注意：安裝完iVCam，它會自動偵測需要安裝最新版本，還要再安裝一次iVCam。<br>
+  <br>
+  <span class='red'> 
+ （3）下載VisCam使用說明書：<br>
+    </span>
+    ☎<a href='example/chp16/ppt/20220524-VisCam使用說明書.pdf' target="_blank" >下載VisCam使用說明書</a><br>
+      
+<br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>     
+<tr bgcolor="#f0f0f0" id="exp4_14">
+  <td><p></p></td>
+  <td colspan="5" bgcolor="#FFFFFF"><p>
+    13.VisLab 進階操作 &蒐集圖片方式<br>
+    <br>
+    <span class='red'> 
+    1.下載講義<br>
+      </span>
+      ☎<a href='example/chp16/ppt/VisLab第四堂簡報.pdf' target="_blank" >下載講義</a><br>
+      <br>
+    <span class='red'> 
+    2.深度學習/資料查詢的工具1：kaggle<br>
+     </span>
+     （1）功能：<br>
+     ☎在Kaggle上面還有一個Dataset專區。往往我們在做分析的時候，最缺的就是整理好的資料，如果要在自己用API或是爬蟲去抓資料，會耗費許多的時間跟精力，在Dataset專區我們可以看到許多已經被整理好的資料提供大家下載。<br>
+     ☎Kaggle是全世界公認最大的資料科學社群，在Kaggle上隨時都有各種資料分析的比賽正在進行，由於這些比賽都會提供高額的獎金，因此會吸引全世界優秀的資料科學家前來比賽，並有許多熱愛分享的科學家在比賽過後再討論區留下他們的當初思考問題的邏輯以及解題的脈絡，研讀上面的討論串對於提升自己各方面的思考能力有很大的幫助。<br>
+     ☎其他類似的網站像是KDD cup, 中國的天池、DataCastle、DataFountain。<br>
+    ☎在Kaggle上面的比賽有分不同的類別，對於剛入門的初學者來說，上面很多比賽並不是那麼的適合，比如說有些比賽光是資料集就30–40GB，對於一般人的電腦來說，這樣的資料量過大，可能光是試跑一次Model就要好幾天或是Memory Out、以及大部分的影像辨識比賽都需要專門的GPU硬體設備，如果只用CPU也會跑非常久。<br>
+    （2）網站：<br>
+    ☎<a href='https://www.kaggle.com/' target="_blank" >kaggle網站</a><br>
+    ☎<a href='https://medium.com/jameslearningnote/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC1-3%E8%AC%9B-kaggle%E4%BB%8B%E7%B4%B9-f0fd99d30f92' target="_blank" >網站使用教學</a><br>
+      <br>
+    <span class='red'> 
+     3.深度學習/資料查詢的工具2：papers with code<br>
+       </span>
+       （1）功能：<br>
+       ☎最新機器學習論文哪裡找？免費平台 Papers with Code 可搜尋即時排名、抓code<br>
+       ☎隨著機器學習討論度越來越高，以此為主題的論文數量也越來越多了。要怎麼不花錢、不費時間，又能找到最新最優質的 AI 論文呢？別怕！論文搜尋神器 Papers with Code 可以解決你的困難<br>
+       ☎AI 所有領域最優資料搜尋神器」— Papers with Code<br>
+       ☎網站上有超過 2500 多個排行榜和 20,000 多個論文結果。此外，結果現在可以直接鏈接到 arXiv 中的表格，只需要輕輕一點 result，就能夠提取出論文結果來<br>
+       （2）網站：<br>
+      ☎<a href='https://paperswithcode.com/' target="_blank" >papers with code網站</a><br>
+      ☎<a href='https://buzzorange.com/techorange/2020/07/14/the-latest-in-machine-learning/' target="_blank" >papers with code網站使用教學</a><br>
+      <br>
+
+<span class='red'> 
+4.自己收集圖片：到google輸入：批量圖片下載<br>
+</span>
+☎<a href='https://www.google.com/search?q=%E6%89%B9%E9%87%8F%E5%9C%96%E7%89%87%E4%B8%8B%E8%BC%89&oq=%E6%89%B9%E9%87%8F%E5%9C%96%E7%89%87%E4%B8%8B%E8%BC%89&aqs=chrome..69i57.13004j0j7&sourceid=chrome&ie=UTF-8' target="_blank" >到google輸入：批量圖片下載</a><br>
+<br>
+
+<span class='red'> 
+5.使用Chrome 擴充功能：Imageye 免費圖片下載器，批次下載網頁所有圖檔<br>
+</span>
+☎<a href='https://free.com.tw/imageye/' target="_blank" >Imageye使用教學</a><br>
+☎<a href='https://chrome.google.com/webstore/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm' target="_blank" >play store下載：Image downloader - Imageye</a><br>
+         
+       <br>
+<br>
+
+<br>
+    
+      <br >
+    </p></td>
+</tr>    
+
+
+        <tr bgcolor="#f0f0f0">
+            <td><p></p></td>
+            <td colspan="5" bgcolor="#FFFFFF"><p>
+              </p></td>
+        </tr>  
+</table>
+
+
+
+</div>
+<!-- Back to top button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+  </body>
+</html>
